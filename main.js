@@ -296,12 +296,48 @@
     });
   }
 
-  /* ---------- 14. Weather (CABA) ---------- */
-  function initWeather() {
+  
+  /* ---------- 14. Weather & Dollar (Auto) ---------- */
+  function initWeatherAndDollar() {
     var weatherEl = document.getElementById('header-weather');
     if (!weatherEl) return;
+    
+    // Fetch Weather (Open-Meteo)
     fetch('https://api.open-meteo.com/v1/forecast?latitude=-34.6131&longitude=-58.3772&current_weather=true')
       .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data && data.current_weather) {
+          var temp = Math.round(data.current_weather.temperature);
+          var code = data.current_weather.weathercode;
+          var icon = '☀️'; // Default sun
+          if (code >= 1 && code <= 3) icon = '⛅'; // Clouds/Sun
+          if (code >= 45 && code <= 48) icon = '🌫️'; // Fog
+          if (code >= 51 && code <= 67) icon = '🌧️'; // Rain
+          if (code >= 71 && code <= 77) icon = '❄️'; // Snow
+          if (code >= 95 && code <= 99) icon = '⛈️'; // Thunderstorm
+          
+          weatherEl.innerHTML = icon + ' CABA ' + temp + '&deg;C';
+        }
+      })
+      .catch(function(err) { console.error(err); });
+
+    // Fetch Dólar Blue (DolarAPI)
+    var dollarEl = document.createElement('span');
+    dollarEl.className = 'header-dollar';
+    dollarEl.style.marginLeft = '12px';
+    dollarEl.innerHTML = 'Cargando dólar...';
+    weatherEl.parentNode.insertBefore(dollarEl, weatherEl.nextSibling);
+
+    fetch('https://dolarapi.com/v1/dolares/blue')
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data && data.venta) {
+          dollarEl.innerHTML = '💵 Blue: $' + data.venta;
+        }
+      })
+      .catch(function(err) { dollarEl.style.display = 'none'; });
+  }
+)
       .then(function(data) {
         if (data && data.current_weather) {
           var temp = Math.round(data.current_weather.temperature);
@@ -467,7 +503,7 @@
     initCalculator();
     initHeroModeSwitch();
     initPoll();
-    initWeather();
+    initWeatherAndDollar();
     initParitarias();
     initArticleModal();
   });
