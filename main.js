@@ -142,16 +142,7 @@
     }, { passive: true });
   }
 
-  /* ---------- 8. Dark Mode Toggle ---------- */
-  function initDarkMode() {
-    var btn = document.getElementById('darkmode-btn');
-    if (!btn) return;
-
-    function applyTheme(theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-      localStorage.setItem('g360-theme', theme);
-    }
-
+  
     btn.addEventListener('click', function () {
       var current = document.documentElement.getAttribute('data-theme') || 'light';
       applyTheme(current === 'dark' ? 'light' : 'dark');
@@ -497,7 +488,7 @@
     initNewsletter();
     initSmoothScroll();
     initScrollHeader();
-    initDarkMode();
+    
     initConflictCounter(); // old logic, will be overridden by paritarias
     initWaBanner();
     initCalculator();
