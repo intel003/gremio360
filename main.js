@@ -143,11 +143,7 @@
   }
 
   
-    btn.addEventListener('click', function () {
-      var current = document.documentElement.getAttribute('data-theme') || 'light';
-      applyTheme(current === 'dark' ? 'light' : 'dark');
-    });
-  }
+
 
   /* ---------- 9. Conflict Day Counter ---------- */
   function initConflictCounter() {
@@ -328,17 +324,7 @@
       })
       .catch(function(err) { dollarEl.style.display = 'none'; });
   }
-)
-      .then(function(data) {
-        if (data && data.current_weather) {
-          var temp = Math.round(data.current_weather.temperature);
-          weatherEl.innerHTML = '&#9728;&#65039; CABA ' + temp + '&deg;C';
-        }
-      })
-      .catch(function(err) {
-        weatherEl.style.display = 'none';
-      });
-  }
+
 
   /* ---------- 15. Paritarias Selector ---------- */
   function initParitarias() {
