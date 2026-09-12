@@ -654,15 +654,16 @@ function initArticleModal() {
         
         if (catMap[hash]) {
           e.preventDefault();
-          var term = catMap[hash];
           
-          // Close mobile nav if open
-          var nav = document.getElementById('main-nav');
-          var overlay = document.getElementById('nav-overlay');
-          var btn = document.getElementById('hamburger-btn');
-          if (nav && !nav.hidden) {
-            nav.hidden = true;
-            nav.setAttribute('aria-hidden', 'true');
+          // Close mobile nav only if on mobile
+          if (window.innerWidth < 992) {
+            var nav = document.getElementById('main-nav');
+            var overlay = document.getElementById('nav-overlay');
+            var btn = document.getElementById('hamburger-btn');
+            if (nav) {
+              nav.hidden = true;
+              nav.setAttribute('aria-hidden', 'true');
+            }
             if(overlay) overlay.hidden = true;
             if(btn) {
               btn.classList.remove('active');
@@ -670,53 +671,56 @@ function initArticleModal() {
             }
           }
           
-          // Open search modal
-          if (typeof openSearch === 'function') {
-            openSearch();
-            
-            var executeCatSearch = function() {
-              var sInput = document.getElementById('search-input');
-              if(sInput) {
-                // Remove the partial word to show a nicer term in input, but search with partial?
-                // Actually, let's just put the hash word in the input and search that.
-                var niceTerm = hash.replace('#', '');
-                sInput.value = niceTerm;
-                
-                // Let's manually trigger the search logic
-                var results = document.getElementById('search-results');
-                var q = catMap[hash];
-                
-                var matches = noticiasDB.filter(function(n) {
-                  return n.title.toLowerCase().includes(q) || n.resume.toLowerCase().includes(q) || n.category.toLowerCase().includes(q);
-                });
-                
-                if (matches.length === 0) {
-                  results.innerHTML = '<p style="color:var(--text-muted); font-size:0.9rem; text-align:center; margin-top:32px;">No se encontraron noticias para esta categoría.</p>';
-                  return;
-                }
-                
-                var html = '';
-                matches.forEach(function(n) {
-                  html += '<article class="politics-card" style="margin-bottom:0; cursor:pointer;" onclick="window.location.href=\'' + window.location.pathname + '#' + n.id + '\'; window.location.reload();">';
-                  html += '<span class="politics-category">' + n.category + '</span>';
-                  html += '<h3 class="politics-title" style="font-size:1.1rem;">' + n.title + '</h3>';
-                  html += '<div class="politics-meta">' + n.date + '</div>';
-                  html += '</article>';
-                });
-                results.innerHTML = html;
+          // Open search modal without triggering its internal fetch race condition
+          var searchModal = document.getElementById('search-modal');
+          var searchInput = document.getElementById('search-input');
+          if(searchModal) {
+            searchModal.hidden = false;
+            searchModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => searchInput && searchInput.focus(), 100);
+          }
+          
+          var executeCatSearch = function() {
+            if(searchInput) {
+              var niceTerm = hash.replace('#', '');
+              // capitalize first letter
+              niceTerm = niceTerm.charAt(0).toUpperCase() + niceTerm.slice(1);
+              searchInput.value = niceTerm;
+              
+              var results = document.getElementById('search-results');
+              var q = catMap[hash];
+              
+              var matches = noticiasDB.filter(function(n) {
+                return n.title.toLowerCase().includes(q) || n.resume.toLowerCase().includes(q) || n.category.toLowerCase().includes(q);
+              });
+              
+              if (matches.length === 0) {
+                results.innerHTML = '<p style="color:var(--text-muted); font-size:0.9rem; text-align:center; margin-top:32px;">No se encontraron noticias para esta categoría.</p>';
+                return;
               }
-            };
-            
-            if (noticiasDB.length === 0) {
-              fetch('noticias.json')
-                .then(res => res.json())
-                .then(data => {
-                  noticiasDB = data;
-                  executeCatSearch();
-                });
-            } else {
-              executeCatSearch();
+              
+              var html = '';
+              matches.forEach(function(n) {
+                html += '<article class="politics-card" style="margin-bottom:0; cursor:pointer;" onclick="window.location.href=\'' + window.location.pathname + '#' + n.id + '\'; window.location.reload();">';
+                html += '<span class="politics-category">' + n.category + '</span>';
+                html += '<h3 class="politics-title" style="font-size:1.1rem;">' + n.title + '</h3>';
+                html += '<div class="politics-meta">' + n.date + '</div>';
+                html += '</article>';
+              });
+              results.innerHTML = html;
             }
+          };
+          
+          if (noticiasDB.length === 0) {
+            fetch('noticias.json?v=' + Date.now())
+              .then(res => res.json())
+              .then(data => {
+                noticiasDB = data;
+                executeCatSearch();
+              });
+          } else {
+            executeCatSearch();
           }
         }
       });
