@@ -402,7 +402,7 @@
 
   
   /* ---------- 16. Article Modal ---------- */
-  function initArticleModal() {
+function initArticleModal() {
     var modal = document.getElementById('article-modal');
     if (!modal) return;
     
@@ -412,57 +412,99 @@
     var mCat = document.getElementById('modal-cat');
     var mMeta = document.getElementById('modal-meta');
     var mBody = document.getElementById('modal-body');
+    
+    var modeSwitch = document.getElementById('modal-mode-switch');
+    var btnFormal = document.getElementById('modal-mode-formal');
+    var btnCriollo = document.getElementById('modal-mode-criollo');
+    
+    var currentDevHtml = '';
+    var currentCriolloHtml = '';
 
-    function openModal(e) {
-      e.preventDefault();
-      var target = e.currentTarget;
+    document.addEventListener('click', function(e) {
+      var target = e.target.closest('.leer-nota');
+      if (!target) return;
       
-      // Determine if it's hero or subnote
+      e.preventDefault();
+      
       var isHero = target.classList.contains('btn--primary');
       var container = isHero ? document.querySelector('.hero-article') : target.closest('article');
       
       if (!container) return;
       
-      var title = isHero ? container.querySelector('.hero-title').textContent : (container.querySelector('.subnote-title') || container.querySelector('.politics-title')).textContent;
-      var cat = isHero ? document.querySelector('.hero-category-badge').textContent : (container.querySelector('.subnote-category') || container.querySelector('.politics-category')).textContent;
-      var meta = isHero ? container.querySelector('.hero-meta').innerHTML : (container.querySelector('.subnote-meta') || container.querySelector('.politics-meta')).innerHTML;
+      var tEl = isHero ? container.querySelector('.hero-title') : (container.querySelector('.subnote-title') || container.querySelector('.politics-title'));
+      var cEl = isHero ? document.querySelector('.hero-category-badge') : (container.querySelector('.subnote-category') || container.querySelector('.politics-category'));
+      var mEl = isHero ? container.querySelector('.hero-meta') : (container.querySelector('.subnote-meta') || container.querySelector('.politics-meta'));
+      
+      var title = tEl ? tEl.textContent : '';
+      var cat = cEl ? cEl.textContent : '';
+      var meta = mEl ? mEl.innerHTML : '';
       
       var devEl = container.querySelector('.hidden-desarrollo');
-      var bodyText = devEl ? devEl.innerHTML : '<p>Contenido no disponible.</p>';
+      var criolloEl = container.querySelector('.hidden-criollo'); // We will add this when injecting
       
-      // For paragraphs
-      if(bodyText.indexOf('<p>') === -1) {
-        bodyText = '<p>' + bodyText.replace(/\n\n/g, '</p><p>') + '</p>';
+      currentDevHtml = devEl ? devEl.innerHTML : '<p>Contenido en desarrollo...</p>';
+      if(currentDevHtml.indexOf('<p>') === -1) {
+        currentDevHtml = '<p>' + currentDevHtml.replace(/
+
+/g, '</p><p>') + '</p>';
+      }
+      
+      if (criolloEl) {
+        currentCriolloHtml = criolloEl.innerHTML;
+        if(currentCriolloHtml.indexOf('<ul>') === -1 && currentCriolloHtml.indexOf('<p>') === -1) {
+             currentCriolloHtml = '<p>' + currentCriolloHtml.replace(/
+
+/g, '</p><p>') + '</p>';
+        }
+        if (modeSwitch) modeSwitch.hidden = false;
+      } else {
+        currentCriolloHtml = '';
+        if (modeSwitch) modeSwitch.hidden = true;
       }
 
-      mTitle.textContent = title;
-      mCat.textContent = cat;
-      mMeta.innerHTML = meta;
-      mBody.innerHTML = bodyText;
+      if (mTitle) mTitle.textContent = title;
+      if (mCat) mCat.textContent = cat;
+      if (mMeta) mMeta.innerHTML = meta;
+      
+      // Default to formal
+      if (mBody) mBody.innerHTML = currentDevHtml;
+      if (btnFormal) btnFormal.classList.add('active');
+      if (btnCriollo) btnCriollo.classList.remove('active');
       
       modal.hidden = false;
-      document.body.style.overflow = 'hidden'; // lock scroll
+      document.body.style.overflow = 'hidden';
+    });
+
+    if (btnFormal) {
+      btnFormal.addEventListener('click', function() {
+        btnFormal.classList.add('active');
+        btnCriollo.classList.remove('active');
+        if (mBody) mBody.innerHTML = currentDevHtml;
+      });
     }
 
+    if (btnCriollo) {
+      btnCriollo.addEventListener('click', function() {
+        btnCriollo.classList.add('active');
+        btnFormal.classList.remove('active');
+        if (mBody) mBody.innerHTML = currentCriolloHtml;
+      });
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
+    
     function closeModal() {
       modal.hidden = true;
       document.body.style.overflow = '';
     }
-
-    var readBtns = document.querySelectorAll('.leer-nota');
-    readBtns.forEach(function(btn) {
-      btn.addEventListener('click', openModal);
-    });
-
-    closeBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', closeModal);
     
-    // ESC key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && !modal.hidden) {
         closeModal();
       }
     });
+  }
   }
 
   /* ---------- Init ---------- */
