@@ -1,497 +1,464 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Gremio 360 – Periodismo de Base. Noticias sindicales, paritarias, elecciones y denuncias gremiales." />
-  <meta name="theme-color" content="#EAB308" />
-  <meta property="og:title" content="Gremio 360 – Periodismo de Base" />
-  <meta property="og:description" content="Noticias sindicales, paritarias, elecciones y denuncias gremiales." />
-  <meta property="og:type" content="website" />
-  <title>Gremio 360 – Periodismo de Base</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
 
+<html data-theme="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Gremio 360 – Periodismo de Base. Noticias sindicales, paritarias, elecciones y denuncias gremiales." name="description"/>
+<meta content="#EAB308" name="theme-color"/>
+<meta content="Gremio 360 – Periodismo de Base" property="og:title"/>
+<meta content="Noticias sindicales, paritarias, elecciones y denuncias gremiales." property="og:description"/>
+<meta content="website" property="og:type"/>
+<title>Gremio 360 – Periodismo de Base</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="site-header" role="banner">
-    <div class="header-top">
-      <div class="header-top-left">
-        <span class="header-date" id="current-date"></span>
-        <span class="header-weather" id="header-weather">Cargando clima...</span>
-      </div>
-      <span class="header-tagline">Periodismo de Base</span>
-    </div>
-    <div class="header-main">
-      <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-      </button>
-      <a href="/" class="logo-link" aria-label="Gremio 360 - Inicio">
-        <div class="logo">
-          <div class="logo-monogram" aria-hidden="true">
-            <span class="mono-g">G</span><span class="mono-num">360</span>
-          </div>
-          <div class="logo-wordmark">
-            <span class="logo-text">GREMIO</span>
-            <span class="logo-accent-line"></span>
-            <span class="logo-subtitle">PERIODISMO DE BASE</span>
-          </div>
-        </div>
-      </a>
-      <div class="header-actions">
-        <button class="search-btn" aria-label="Buscar">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-        
-      </div>
-    </div>
-    <nav class="main-nav" id="main-nav" role="navigation" aria-label="Navegacion principal" hidden>
-      <ul class="nav-list">
-        <li><a href="#salarios" class="nav-link">Salarios</a></li>
-        <li><a href="#elecciones" class="nav-link">Elecciones</a></li>
-        <li><a href="#denuncias" class="nav-link">Denuncias</a></li>
-        <li><a href="#base" class="nav-link">Base / Sucursales</a></li>
-        <li><a href="#paritarias" class="nav-link">Paritarias</a></li>
-        <li><a href="#investigacion" class="nav-link">Investigacion</a></li>
-        <li><a href="mailto:contacto@gremio360.proton.me" class="nav-link nav-link--contact">Contacto Seguro</a></li>
-      </ul>
-    </nav>
-    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
-  </header>
-
-  <main id="main-content">
-
-    <!-- BREAKING NEWS -->
-    <section class="breaking-bar" aria-label="Ultimas noticias" role="region">
-      <div class="breaking-label">
-        <span class="breaking-dot"></span>
+<!-- HEADER -->
+<header class="site-header" role="banner">
+<div class="header-top">
+<div class="header-top-left">
+<span class="header-date" id="current-date"></span>
+<span class="header-weather" id="header-weather">Cargando clima...</span>
+</div>
+<span class="header-tagline">Periodismo de Base</span>
+</div>
+<div class="header-main">
+<button aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu" class="hamburger" id="hamburger-btn">
+<span class="hamburger-bar"></span>
+<span class="hamburger-bar"></span>
+<span class="hamburger-bar"></span>
+</button>
+<a aria-label="Gremio 360 - Inicio" class="logo-link" href="/">
+<div class="logo">
+<div aria-hidden="true" class="logo-monogram">
+<span class="mono-g">G</span><span class="mono-num">360</span>
+</div>
+<div class="logo-wordmark">
+<span class="logo-text">GREMIO</span>
+<span class="logo-accent-line"></span>
+<span class="logo-subtitle">PERIODISMO DE BASE</span>
+</div>
+</div>
+</a>
+<div class="header-actions">
+<button aria-label="Buscar" class="search-btn">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+</button>
+</div>
+</div>
+<nav aria-label="Navegacion principal" class="main-nav" hidden="" id="main-nav" role="navigation">
+<ul class="nav-list">
+<li><a class="nav-link" href="#salarios">Salarios</a></li>
+<li><a class="nav-link" href="#elecciones">Elecciones</a></li>
+<li><a class="nav-link" href="#denuncias">Denuncias</a></li>
+<li><a class="nav-link" href="#base">Base / Sucursales</a></li>
+<li><a class="nav-link" href="#paritarias">Paritarias</a></li>
+<li><a class="nav-link" href="#investigacion">Investigacion</a></li>
+<li><a class="nav-link nav-link--contact" href="mailto:contacto@gremio360.proton.me">Contacto Seguro</a></li>
+</ul>
+</nav>
+<div aria-hidden="true" class="nav-overlay" id="nav-overlay"></div>
+</header>
+<main id="main-content">
+<!-- BREAKING NEWS -->
+<section aria-label="Ultimas noticias" class="breaking-bar" role="region">
+<div class="breaking-label">
+<span class="breaking-dot"></span>
         ULTIMO MOMENTO
       </div>
-      <div class="ticker-wrapper">
-        <div class="ticker-track" id="ticker-track">
-          <span class="ticker-item"><span class="ticker-bullet"></span>Escándalo en el Senado: la AGN desmiente a Bausili por el destino del oro</span>
-          <span class="ticker-item"><span class="ticker-bullet"></span>Reforma Laboral: la Justicia frena los topes indemnizatorios por inconstitucionales</span>
-          <span class="ticker-item"><span class="ticker-bullet"></span>Canasta básica caliente: una familia necesita $1.600.000 para no ser pobre</span>
-          <span class="ticker-item"><span class="ticker-bullet"></span>UOM Bragado metió paro por tiempo indeterminado y sacó un bono de $1,3 millones</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- WHATSAPP BANNER -->
-    <div class="wa-channel-bar" id="wa-banner" hidden>
-      <div class="wa-channel-content">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="wa-channel-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<div class="ticker-wrapper">
+<div class="ticker-track" id="ticker-track">
+<span class="ticker-item"><span class="ticker-bullet"></span>Escándalo en el Senado: la AGN desmiente a Bausili por el destino del oro</span>
+<span class="ticker-item"><span class="ticker-bullet"></span>Reforma Laboral: la Justicia frena los topes indemnizatorios por inconstitucionales</span>
+<span class="ticker-item"><span class="ticker-bullet"></span>Canasta básica caliente: una familia necesita $1.600.000 para no ser pobre</span>
+<span class="ticker-item"><span class="ticker-bullet"></span>UOM Bragado metió paro por tiempo indeterminado y sacó un bono de $1,3 millones</span>
+</div>
+</div>
+</section>
+<!-- WHATSAPP BANNER -->
+<div class="wa-channel-bar" hidden="" id="wa-banner">
+<div class="wa-channel-content">
+<svg class="wa-channel-icon" fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
         Seguinos en WhatsApp para recibir las noticias al instante
       </div>
-      <a href="https://wa.me/canal-gremio360" class="wa-channel-btn" target="_blank">Unirme al canal</a>
-      <button class="wa-channel-close" id="wa-banner-close" aria-label="Cerrar">&times;</button>
-    </div>
-
-    <!-- WIDGET PARITARIAS -->
-    <section class="paritaria-widget" id="paritarias" aria-label="Estado de paritarias">
-      <div class="container paritaria-inner">
-        <div class="paritaria-info">
-          
-          <div class="paritaria-header-wrap">
-            <div class="paritaria-badge">📊 PARITARIA 2026</div>
-            <select class="paritaria-select" id="gremio-select" aria-label="Seleccionar gremio">
-              <option value="bancarios">Bancarios</option>
-              <option value="seguridad">Seguridad Privada (UPSRA)</option>
-              <option value="comercio">Comercio (FAECYS)</option>
-              <option value="uom">Metalúrgicos (UOM)</option>
-              <option value="sanidad">Sanidad (FATSA)</option>
-              <option value="camioneros">Camioneros</option>
-            </select>
-          </div>
-
-          <div class="paritaria-details">
-            <div class="paritaria-row">
-              <span class="paritaria-item">
-                <span class="paritaria-key">Oferta patronal</span>
-                <span class="paritaria-val paritaria-val--low" id="paritaria-oferta">12%</span>
-              </span>
-              <span class="paritaria-sep">|</span>
-              <span class="paritaria-item">
-                <span class="paritaria-key">Pedido de base</span>
-                <span class="paritaria-val paritaria-val--high" id="paritaria-pedido">18%</span>
-              </span>
-              <span class="paritaria-sep">|</span>
-              <span class="paritaria-item">
-                <span class="paritaria-key">Estado</span>
-                <span class="paritaria-val paritaria-estado" id="paritaria-estado-text">
-                  <span class="estado-dot" id="paritaria-estado-dot"></span>
+<a class="wa-channel-btn" href="https://wa.me/canal-gremio360" target="_blank">Unirme al canal</a>
+<button aria-label="Cerrar" class="wa-channel-close" id="wa-banner-close">×</button>
+</div>
+<!-- WIDGET PARITARIAS -->
+<section aria-label="Estado de paritarias" class="paritaria-widget" id="paritarias">
+<div class="container paritaria-inner">
+<div class="paritaria-info">
+<div class="paritaria-header-wrap">
+<div class="paritaria-badge">📊 PARITARIA 2026</div>
+<select aria-label="Seleccionar gremio" class="paritaria-select" id="gremio-select">
+<option value="bancarios">Bancarios</option>
+<option value="seguridad">Seguridad Privada (UPSRA)</option>
+<option value="comercio">Comercio (FAECYS)</option>
+<option value="uom">Metalúrgicos (UOM)</option>
+<option value="sanidad">Sanidad (FATSA)</option>
+<option value="camioneros">Camioneros</option>
+</select>
+</div>
+<div class="paritaria-details">
+<div class="paritaria-row">
+<span class="paritaria-item">
+<span class="paritaria-key">Oferta patronal</span>
+<span class="paritaria-val paritaria-val--low" id="paritaria-oferta">12%</span>
+</span>
+<span class="paritaria-sep">|</span>
+<span class="paritaria-item">
+<span class="paritaria-key">Pedido de base</span>
+<span class="paritaria-val paritaria-val--high" id="paritaria-pedido">18%</span>
+</span>
+<span class="paritaria-sep">|</span>
+<span class="paritaria-item">
+<span class="paritaria-key">Estado</span>
+<span class="paritaria-val paritaria-estado" id="paritaria-estado-text">
+<span class="estado-dot" id="paritaria-estado-dot"></span>
                   EN NEGOCIACION
                 </span>
-              </span>
-            </div>
-            <div class="paritaria-next" id="paritaria-reunion">Proxima reunion: <strong>Lunes 15 de septiembre</strong></div>
-          </div>
-        </div>
-
-        <div class="conflict-counter" id="conflict-widget">
-          <div class="counter-number" id="conflict-days">0</div>
-          <div class="counter-label">dias<br>en conflicto</div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <section class="hero-section" aria-label="Noticia principal">
-      <article class="hero-article">
-        <div class="hero-image-wrap">
-          <img src="hero-jovenes.jpg" alt="Asamblea" class="hero-image" loading="eager" width="1200" height="630" />
-          <span class="hero-category-badge">ESCÁNDALO NACIONAL</span>
-        </div>
-        <div class="hero-content">
-          <div class="hero-meta">
-            <span class="hero-category-badge">Periodismo de Base</span>
-            <time datetime="2026-09-11">Hace 20 min</time>
-          </div>
-          <h2 class="hero-title">"El oro no está auditado": la verdad detrás del cruce a Bausili en el Senado</h2>
-          <p class="hero-resume" id="hero-lead-text">El titular del Central aseguró que las reservas que mandaron a Suiza estaban bajo control de la AGN. A las pocas horas, lo desmintieron con papeles oficiales.</p>
-          
-          <div class="hero-actions">
-            <button type="button" class="btn btn--primary leer-nota">Leer nota completa</button>
-            <button type="button" class="btn btn--secondary btn--share">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</span>
+</div>
+<div class="paritaria-next" id="paritaria-reunion">Proxima reunion: <strong>Lunes 15 de septiembre</strong></div>
+</div>
+</div>
+<div class="conflict-counter" id="conflict-widget">
+<div class="counter-number" id="conflict-days">0</div>
+<div class="counter-label">dias<br/>en conflicto</div>
+</div>
+</div>
+</section>
+<section aria-label="Noticia principal" class="hero-section">
+<article class="hero-article" id="nota-bausili">
+<div class="hero-image-wrap">
+<img alt="Asamblea" class="hero-image" height="630" loading="eager" src="hero-jovenes.jpg" width="1200"/>
+<span class="hero-category-badge">ESCÁNDALO NACIONAL</span>
+</div>
+<div class="hero-content">
+<div class="hero-meta">
+<span class="hero-category-badge">Periodismo de Base</span>
+<time datetime="2026-09-11">Hace 20 min</time>
+<button aria-label="Compartir en WhatsApp" class="inline-whatsapp-btn share-btn-wa" data-id="nota-bausili" data-title='"El oro no está auditado": la verdad detrás del cruce a Bausili en el Senado'><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></button></div>
+<h2 class="hero-title">"El oro no está auditado": la verdad detrás del cruce a Bausili en el Senado</h2>
+<p class="hero-resume" id="hero-lead-text">El titular del Central aseguró que las reservas que mandaron a Suiza estaban bajo control de la AGN. A las pocas horas, lo desmintieron con papeles oficiales.</p>
+<div class="hero-actions">
+<a class="btn btn--primary leer-nota" href="#nota-bausili">Leer nota completa</a>
+<button class="btn btn--secondary btn--share share-btn-wa" data-id="nota-bausili" data-title="'El oro no está auditado': la verdad detrás del cruce a Bausili en el Senado" type="button">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
               Compartir
             </button>
-          </div>
-
-          <div class="hidden-desarrollo" hidden>
-            <p>Lo que empezó como una exposición de rutina en el Senado terminó en uno de los cruces más filosos de la semana. Ante las comisiones de Economía, el presidente del Banco Central, Santiago Bausili, fue consultado sobre el destino de las reservas de oro que el Gobierno sacó del país a mitad de año. Bausili contestó sin dudar que los lingotes estaban depositados en Suiza y que la operación estaba "totalmente auditada por la Auditoría General de la Nación (AGN)".</p>
-            <p>Pero el relato oficial se desarmó en menos de 24 horas. Tras un pedido de informes al propio organismo de control, la AGN respondió por escrito que los balances de 2025 "se encuentran en proceso de análisis" y todavía no fueron aprobados. Es decir, la trazabilidad del oro nacional sigue siendo un misterio en los papeles.</p>
-            <p>El escándalo estalla en el peor momento: el Congreso está debatiendo justamente la reforma de la Carta Orgánica del Banco Central. Desde la oposición legislativa salieron a acusar al funcionario de "mentirle en la cara a las instituciones", exigiendo que se transparente si parte de ese patrimonio nacional terminó inmovilizado en cuentas de Londres como garantía para futuros préstamos.</p>
-          </div>
-          
-          <div class="hidden-criollo" hidden>
-            <ul>
-              <li><strong>¿Qué pasó?</strong> El presi del Banco Central dijo en el Senado que el oro que mandaron a Suiza estaba 100% auditado. La AGN lo desmintió con papeles.</li>
-              <li><strong>¿Qué exigen?</strong> La oposición pide que blanqueen de una vez dónde están los lingotes y si los usaron de garantía para pedir deuda en Londres.</li>
-              <li><strong>¿Cómo te afecta?</strong> Es el respaldo de la guita del país. Si no hay transparencia con el patrimonio nacional, la desconfianza económica termina pegando en la calle.</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- SUBNOTES -->
-    <section class="subnotes-section" aria-label="Noticias destacadas">
-      <div class="subnotes-grid">
-        <!-- Nota 1 -->
-        <article class="subnote-card">
-          <a href="#" class="subnote-link leer-nota">
-            <div class="subnote-body">
-            <span class="subnote-category">Metalúrgicos</span>
-              <h3 class="subnote-title">UOM Bragado metió paro por tiempo indeterminado y logró súper bono</h3>
-              <p class="subnote-resume">Paralizaron la fábrica Acerbrag y le torcieron el brazo a la patronal: cobran $1.3 millones extra.</p>
-              <div class="subnote-meta"><time datetime="2026-09-11">Hace 2 horas</time> <span>&#183;</span> <span>3 min de lectura</span></div>
-            </div>
-            <div class="hidden-desarrollo" hidden>
-              <p>Cuando las bases se organizan, la plata aparece. Después de intensas jornadas de huelga por tiempo indeterminado que paralizaron por completo la planta siderúrgica, la UOM Bragado alcanzó un acuerdo histórico con la empresa Acerbrag.</p>
-              <p>El conflicto explotó por el estancamiento de los salarios y las escalas que venían perdiendo por paliza contra el súper. La firmeza de los operarios para frenar los hornos obligó a la patronal a sentarse a firmar: arreglaron una gratificación extraordinaria de casi 1,3 millones de pesos para cada trabajador.</p>
-              <p>Este triunfo marca la cancha para otras seccionales que vienen reclamando sumas fijas de impacto directo al bolsillo, esquivando los tibios porcentajes nacionales.</p>
-            </div>
-            <div class="hidden-criollo" hidden>
-              <ul>
-                <li>Los metalúrgicos de Bragado se plantaron y pararon la fábrica por tiempo indeterminado.</li>
-                <li>La patronal no aguantó la pérdida de producción y firmó un bono de $1.300.000 por cabeza.</li>
-                <li>Moraleja: cuando la planta se une y no afloja, la guita para los sueldos termina apareciendo.</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-
-        <!-- Nota 2 -->
-        <article class="subnote-card">
-          <a href="#" class="subnote-link leer-nota">
-            <div class="subnote-body">
-            <span class="subnote-category">Camioneros</span>
-              <h3 class="subnote-title">Moyano exige reapertura urgente: va por un 20% extra para choferes</h3>
-              <p class="subnote-resume">No se conforman con el 10,1% ya cerrado. Apuntan al plus por profesionalidad en larga distancia.</p>
-              <div class="subnote-meta"><time datetime="2026-09-11">Hace 4 horas</time> <span>&#183;</span> <span>4 min de lectura</span></div>
-            </div>
-            <div class="hidden-desarrollo" hidden>
-              <p>La tranquera del transporte no se baja. Aunque a principios de año se firmó una suba semestral del 10,1% con sumas no remunerativas, la conducción de Camioneros pegó el grito en el cielo: aseguran que la paritaria "se quedó corta" frente a la inflación real de la calle.</p>
-              <p>El reclamo actual no es solo un retoque general, sino un aumento contundente del 20% sobre el adicional por profesionalidad para los choferes de rutas y larga distancia, buscando compensar el desgaste físico brutal que implica la tarea.</p>
-              <p>El mensaje al Ministerio de Trabajo fue claro: si no se sientan a renegociar este punto específico antes de que cierre el mes, el paro logístico es inminente. El gobierno busca calma, pero los camiones amenazan con frenar el país.</p>
-            </div>
-            <div class="hidden-criollo" hidden>
-              <ul>
-                <li>Camioneros avisó que el aumento que habían firmado antes se lo comió la inflación.</li>
-                <li>Están exigiendo que le suban un 20% extra a los choferes que hacen larga distancia.</li>
-                <li>Si las cámaras empresarias se hacen las distraídas, el gremio amenaza con frenar la logística nacional.</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-
-        <!-- Nota 3 -->
-        <article class="subnote-card">
-          <a href="#" class="subnote-link leer-nota">
-            <div class="subnote-body">
-            <span class="subnote-category">Justicia</span>
-              <h3 class="subnote-title">La Justicia frena topes indemnizatorios de la Reforma Laboral</h3>
-              <p class="subnote-resume">Jueces de Tucumán y Jujuy declararon inconstitucional ponerle techo a la plata de los despidos.</p>
-              <div class="subnote-meta"><time datetime="2026-09-11">Hace 6 horas</time> <span>&#183;</span> <span>3 min de lectura</span></div>
-            </div>
-            <div class="hidden-desarrollo" hidden>
-              <p>Un duro revés para la reforma laboral del oficialismo llegó desde los tribunales del interior. La Justicia del Trabajo falló en casos clave declarando inconstitucional el artículo 55 de la nueva normativa, que buscaba establecer techos y topes estrictos al cálculo de indemnizaciones por despido sin causa.</p>
-              <p>En Tucumán sentenciaron que recortar la liquidación vulnera el artículo 14 bis. Casi al mismo tiempo, en Jujuy se rechazó la aplicación de esos topes para un laburante, elevando su resarcimiento a casi $160 millones al considerar confiscatorios los nuevos parámetros de la ley.</p>
-              <p>Este doble fallo abre la puerta a una avalancha de amparos en todo el país. La Casa Rosada mira de reojo cómo la Justicia le empieza a desarmar los cimientos de su reforma flexibilizadora.</p>
-            </div>
-            <div class="hidden-criollo" hidden>
-              <ul>
-                <li>La ley de Milei le ponía topes máximos a la plata que te tienen que pagar si te rajan.</li>
-                <li>Jueces del interior dijeron que eso es inconstitucional y mandaron a pagar indemnizaciones completas.</li>
-                <li>Es una victoria inmensa: si te despiden sin causa, las empresas no van a poder usar la reforma para liquidarte chirolas.</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-
-        <!-- Nota 4 -->
-        <article class="subnote-card">
-          <a href="#" class="subnote-link leer-nota">
-            <div class="subnote-body">
-            <span class="subnote-category">Logística</span>
-              <h3 class="subnote-title">Reabre Cargill, pero fleteros amenazan con paralizar puertos bonaerenses</h3>
-              <p class="subnote-resume">La multinacional volvió a operar en Arribeños, pero el conflicto por 30 transportistas excluidos sigue al rojo vivo.</p>
-              <div class="subnote-meta"><time datetime="2026-09-11">Ayer</time> <span>&#183;</span> <span>3 min de lectura</span></div>
-            </div>
-            <div class="hidden-desarrollo" hidden>
-              <p>Después de más de dos meses de paralización, Cargill reabrió las puertas de su gigantesca planta de acopio en Arribeños, bajo un fuerte operativo de seguridad. Sin embargo, lejos de estar solucionado, el conflicto acaba de escalar a nivel provincial.</p>
-              <p>El Sindicato Único de Fleteros advirtió que paralizarán la totalidad de los puertos bonaerenses si la multinacional no reincorpora a 30 transportistas que fueron apartados de la operatoria. Según denuncian las bases, el despido masivo fue una represalia por haber expuesto el cobro de comisiones "en negro" dentro del sistema de cargas.</p>
-              <p>Si no se llega a un acuerdo urgente, la medida de fuerza de los fleteros promete bloquear el ingreso de dólares por la exportación de la cosecha en el momento más crítico para las reservas del Central.</p>
-            </div>
-            <div class="hidden-criollo" hidden>
-              <ul>
-                <li>Cargill abrió su planta después de 2 meses de paro, pero dejó a 30 camiones afuera.</li>
-                <li>Los fleteros denuncian que los marginaron por mandar al frente un curro de comisiones en negro.</li>
-                <li>Si no los reincorporan, el sindicato amenaza con un bloqueo total en todos los puertos de la provincia.</li>
-              </ul>
-            </div>
-          </a>
-        </article>
-      </div>
-    </section>
-    <!-- POLITICS & ECONOMY -->
-    <section class="politics-section" aria-label="Noticias de Politica y Economia">
-      <h2 class="section-title">Política y Economía</h2>
-      <div class="politics-grid">
-        <article class="politics-card">
-          <a href="#" class="politics-link leer-nota">
-            <div class="politics-body">
-              <span class="politics-category">INFLACIÓN Y BOLSILLO</span>
-              <h3 class="politics-title">Inflación baja, pero necesitás $1.6M para no ser pobre</h3>
-              <p class="politics-resume">El INDEC festejó el 1,7% de agosto. La contracara: la canasta básica subió 2,6% y liquida los sueldos de convenio.</p>
-              <div class="hidden-desarrollo" hidden>
-                <p>El Gobierno celebra que la inflación de agosto bajó al 1,7%, el registro más bajo del año. Sin embargo, la realidad paralela del supermercado muestra otra cara: la canasta básica total pegó un salto del 2,6% y fijó la línea de pobreza familiar por encima de los 1.600.000 pesos.</p>
-                <p>Esta desconexión explica por qué los sueldos no alcanzan. Los aumentos se concentraron en los consumos más rígidos: tarifas eléctricas, gas y transporte. Esto anula por completo el alivio del IPC general para la clase trabajadora.</p>
-                <p>Mientras la gran mayoría de los convenios colectivos tienen básicos de ingreso que rondan el millón de pesos (como comercio o seguridad), los hogares se ven empujados al pluriempleo o al endeudamiento con tarjeta de crédito solo para llegar a fin de mes.</p>
-              </div>
-              <div class="hidden-criollo" hidden>
-                <ul>
-                  <li>El gobierno festeja que la inflación promedio bajó a 1,7%.</li>
-                  <li>Pero la comida, la luz y el bondi subieron un 2,6%. Necesitás $1.6 palos para no ser pobre.</li>
-                  <li>La mayoría de los sueldos básicos del país no llegan ni a la mitad de esa plata.</li>
-                </ul>
-              </div>
-              <div class="politics-meta"><time datetime="2026-09-11">Hace 2 horas</time> <span>&#183;</span> <span>3 min de lectura</span></div>
-            </div>
-          </a>
-        </article>
-
-        <article class="politics-card">
-          <a href="#" class="politics-link leer-nota">
-            <div class="politics-body">
-              <span class="politics-category">EMPLEO</span>
-              <h3 class="politics-title">Alarma oficial: el empleo registrado cayó por 13° mes consecutivo</h3>
-              <p class="politics-resume">Construcción, industria y comercio lideran la sangría de puestos de trabajo en blanco a nivel nacional.</p>
-              <div class="hidden-desarrollo" hidden>
-                <p>Las luces rojas del mercado laboral siguen encendidas. Los datos oficiales del SIPA confirmaron el peor escenario: el número de trabajadores formales privados retrocedió por décimo tercer mes consecutivo, retrocediendo a niveles que no se veían desde 2014.</p>
-                <p>La caída del consumo interno y la recesión generalizada golpearon de lleno a la industria manufacturera, la construcción y el comercio minorista. En la calle, el efecto es el cierre de sucursales, suspensiones preventivas y un congelamiento total de las contrataciones jóvenes.</p>
-                <p>Los únicos sectores que están absorbiendo mano de obra son el monotributo precario, las changas y el trabajo no registrado en aplicaciones de delivery, donde los pibes terminan pedaleando sin aportes, ART ni días por enfermedad.</p>
-              </div>
-              <div class="hidden-criollo" hidden>
-                <ul>
-                  <li>Hace más de un año ininterrumpido que se destruyen puestos de laburo en blanco en Argentina.</li>
-                  <li>Comercio, construcción y fábricas son los que más gente vienen dejando en la calle.</li>
-                  <li>El que se queda sin laburo termina obligado a agarrar la bici para una app, sin derechos ni aportes.</li>
-                </ul>
-              </div>
-              <div class="politics-meta"><time datetime="2026-09-11">Hace 5 horas</time> <span>&#183;</span> <span>3 min de lectura</span></div>
-            </div>
-          </a>
-        </article>
-
-        <article class="politics-card">
-          <a href="#" class="politics-link leer-nota">
-            <div class="politics-body">
-              <span class="politics-category">EDUCACIÓN</span>
-              <h3 class="politics-title">Crece la tensión y convocan a la gran Marcha Federal Universitaria</h3>
-              <p class="politics-resume">Nodocentes, docentes y estudiantes preparan una movilización masiva para octubre reclamando por el presupuesto 2027.</p>
-              <div class="hidden-desarrollo" hidden>
-                <p>El frente de conflicto en las universidades no encuentra tregua y vuelve a salir a las calles. La FATUN (nodocentes), junto a los gremios docentes y agrupaciones estudiantiles, ratificaron un plan de lucha nacional ante el desfasaje salarial y el recorte presupuestario.</p>
-                <p>La medida central acordada es la convocatoria a una nueva y masiva Marcha Federal Universitaria para el mes de octubre, con el objetivo de presionar al Congreso en pleno debate del Presupuesto 2027.</p>
-                <p>La comunidad educativa exige blindar partidas frente a un oficialismo que se aferra al déficit cero. Denuncian que los salarios de entrada para los docentes quedaron pulverizados por debajo de la línea de indigencia.</p>
-              </div>
-              <div class="hidden-criollo" hidden>
-                <ul>
-                  <li>Trabajadores, profesores y estudiantes van a salir a reventar las calles de nuevo en octubre.</li>
-                  <li>Denuncian que los sueldos quedaron destruidos y no alcanza para pagar la luz de las facultades.</li>
-                  <li>Buscan meterle presión al Congreso para que el año que viene no recorten más plata de la educación pública.</li>
-                </ul>
-              </div>
-              <div class="politics-meta"><time datetime="2026-09-11">Ayer a la tarde</time> <span>&#183;</span> <span>3 min de lectura</span></div>
-            </div>
-          </a>
-        </article>
-
-        <article class="politics-card">
-          <a href="#" class="politics-link leer-nota">
-            <div class="politics-body">
-              <span class="politics-category">IZQUIERDA</span>
-              <h3 class="politics-title">Bregman descarta a Kicillof y convoca a la "Marcha de la Bronca"</h3>
-              <p class="politics-resume">La dirigente del FIT rechaza armados conjuntos para 2027 y apuesta a la movilización callejera este 19 de septiembre.</p>
-              <div class="hidden-desarrollo" hidden>
-                <p>Myriam Bregman le bajó el pulgar rotundamente a los rumores de una fórmula compartida con Axel Kicillof de cara a las elecciones presidenciales de 2027. La histórica dirigente de la izquierda aclaró que la orientación del gobernador no se acerca al FIT, sino a sectores más conservadores del PJ.</p>
-                <p>Apostando a capitalizar su altísima imagen positiva en las encuestas, Bregman busca transformar la simpatía en los sondeos en organización territorial directa. Para ello, ratificó la conformación de cientos de comités de base.</p>
-                <p>El próximo paso será la calle: convocó a una gran "marcha de la bronca" para el 19 de septiembre en reclamo por la situación de los salarios, y encabezará un acto en Rosario para unificar apoyos con gremios portuarios y docentes.</p>
-              </div>
-              <div class="hidden-criollo" hidden>
-                <ul>
-                  <li>Bregman cortó de raíz el humo: dijo que ni loca hace fórmula con Kicillof en 2027.</li>
-                  <li>Lidera las encuestas de imagen y busca transformar esos "likes" en gente militando en los barrios.</li>
-                  <li>Convocó a la "Marcha de la bronca" para este 19 de septiembre para protestar por los sueldos.</li>
-                </ul>
-              </div>
-              <div class="politics-meta"><time datetime="2026-09-11">Ayer a la noche</time> <span>&#183;</span> <span>2 min de lectura</span></div>
-            </div>
-          </a>
-        </article>
-      </div>
-    </section>
-    <!-- FOOTER -->
-  
-  <!-- CATEGORIES -->
-    <section class="categories-section" aria-label="Categorias del portal">
-      <div class="container">
-        <h2 class="section-title">Explora por tema</h2>
-        <div class="categories-grid">
-          <a href="#salarios" id="salarios" class="category-btn">
-            <span class="category-icon">&#128176;</span>
-            <span class="category-label">Salarios</span>
-            <span class="category-desc">Actualizaciones y escalas</span>
-          </a>
-          <a href="#elecciones" id="elecciones" class="category-btn">
-            <span class="category-icon">&#128499;</span>
-            <span class="category-label">Elecciones</span>
-            <span class="category-desc">Listas, fechas y padrones</span>
-          </a>
-          <a href="#denuncias" id="denuncias" class="category-btn">
-            <span class="category-icon">&#128226;</span>
-            <span class="category-label">Denuncias</span>
-            <span class="category-desc">Irregularidades y reclamos</span>
-          </a>
-          <a href="#base" id="base" class="category-btn">
-            <span class="category-icon">&#127970;</span>
-            <span class="category-label">Base / Sucursales</span>
-            <span class="category-desc">Noticias del interior</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-  <!-- DENUNCIA SEGURA -->
-  <section class="denuncia-section" aria-label="Canal de denuncia segura" id="denuncias">
-    <div class="container">
-      <div class="denuncia-card">
-        <div class="denuncia-icon" aria-hidden="true">&#128274;</div>
-        <div class="denuncia-body">
-          <h2 class="denuncia-title">Denuncia de forma segura</h2>
-          <p class="denuncia-desc">Tu identidad queda protegida. Usamos ProtonMail para que tu denuncia llegue a nuestra redacción sin rastro. Nunca publicamos datos personales sin autorización.</p>
-          <a href="mailto:denuncias@gremio360.proton.me?subject=Denuncia%20Anonima%20Gremio%20360" class="denuncia-btn">
+</div>
+<div class="hidden-desarrollo" hidden="">
+<p>Lo que empezó como una exposición de rutina en el Senado terminó en uno de los cruces más filosos de la semana. Ante las comisiones de Economía, el presidente del Banco Central, Santiago Bausili, fue consultado sobre el destino de las reservas de oro que el Gobierno sacó del país a mitad de año. Bausili contestó sin dudar que los lingotes estaban depositados en Suiza y que la operación estaba "totalmente auditada por la Auditoría General de la Nación (AGN)".</p>
+<p>Pero el relato oficial se desarmó en menos de 24 horas. Tras un pedido de informes al propio organismo de control, la AGN respondió por escrito que los balances de 2025 "se encuentran en proceso de análisis" y todavía no fueron aprobados. Es decir, la trazabilidad del oro nacional sigue siendo un misterio en los papeles.</p>
+<p>El escándalo estalla en el peor momento: el Congreso está debatiendo justamente la reforma de la Carta Orgánica del Banco Central. Desde la oposición legislativa salieron a acusar al funcionario de "mentirle en la cara a las instituciones", exigiendo que se transparente si parte de ese patrimonio nacional terminó inmovilizado en cuentas de Londres como garantía para futuros préstamos.</p>
+</div>
+<div class="hidden-criollo" hidden="">
+<ul>
+<li><strong>¿Qué pasó?</strong> El presi del Banco Central dijo en el Senado que el oro que mandaron a Suiza estaba 100% auditado. La AGN lo desmintió con papeles.</li>
+<li><strong>¿Qué exigen?</strong> La oposición pide que blanqueen de una vez dónde están los lingotes y si los usaron de garantía para pedir deuda en Londres.</li>
+<li><strong>¿Cómo te afecta?</strong> Es el respaldo de la guita del país. Si no hay transparencia con el patrimonio nacional, la desconfianza económica termina pegando en la calle.</li>
+</ul>
+</div>
+</div>
+</article>
+</section>
+<!-- SUBNOTES -->
+<section aria-label="Noticias destacadas" class="subnotes-section">
+<div class="subnotes-grid">
+<!-- Nota 1 -->
+<article class="subnote-card" id="nota-uom">
+<a class="subnote-link leer-nota" href="#nota-uom">
+<div class="subnote-body">
+<span class="subnote-category">Metalúrgicos</span>
+<h3 class="subnote-title">UOM Bragado metió paro por tiempo indeterminado y logró súper bono</h3>
+<p class="subnote-resume">Paralizaron la fábrica Acerbrag y le torcieron el brazo a la patronal: cobran $1.3 millones extra.</p>
+<div class="subnote-meta"><time datetime="2026-09-11">Hace 2 horas</time> <span>·</span> <span>3 min de lectura</span><button aria-label="Compartir en WhatsApp" class="inline-whatsapp-btn share-btn-wa" data-id="nota-uom" data-title="UOM Bragado metió paro por tiempo indeterminado y logró súper bono"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></button></div>
+</div>
+<div class="hidden-desarrollo" hidden="">
+<p>Cuando las bases se organizan, la plata aparece. Después de intensas jornadas de huelga por tiempo indeterminado que paralizaron por completo la planta siderúrgica, la UOM Bragado alcanzó un acuerdo histórico con la empresa Acerbrag.</p>
+<p>El conflicto explotó por el estancamiento de los salarios y las escalas que venían perdiendo por paliza contra el súper. La firmeza de los operarios para frenar los hornos obligó a la patronal a sentarse a firmar: arreglaron una gratificación extraordinaria de casi 1,3 millones de pesos para cada trabajador.</p>
+<p>Este triunfo marca la cancha para otras seccionales que vienen reclamando sumas fijas de impacto directo al bolsillo, esquivando los tibios porcentajes nacionales.</p>
+</div>
+<div class="hidden-criollo" hidden="">
+<ul>
+<li>Los metalúrgicos de Bragado se plantaron y pararon la fábrica por tiempo indeterminado.</li>
+<li>La patronal no aguantó la pérdida de producción y firmó un bono de $1.300.000 por cabeza.</li>
+<li>Moraleja: cuando la planta se une y no afloja, la guita para los sueldos termina apareciendo.</li>
+</ul>
+</div>
+</a>
+</article>
+<!-- Nota 2 -->
+<article class="subnote-card" id="nota-camioneros">
+<a class="subnote-link leer-nota" href="#nota-camioneros">
+<div class="subnote-body">
+<span class="subnote-category">Camioneros</span>
+<h3 class="subnote-title">Moyano exige reapertura urgente: va por un 20% extra para choferes</h3>
+<p class="subnote-resume">No se conforman con el 10,1% ya cerrado. Apuntan al plus por profesionalidad en larga distancia.</p>
+<div class="subnote-meta"><time datetime="2026-09-11">Hace 4 horas</time> <span>·</span> <span>4 min de lectura</span><button aria-label="Compartir en WhatsApp" class="inline-whatsapp-btn share-btn-wa" data-id="nota-camioneros" data-title="Moyano exige reapertura urgente: va por un 20% extra para choferes"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></button></div>
+</div>
+<div class="hidden-desarrollo" hidden="">
+<p>La tranquera del transporte no se baja. Aunque a principios de año se firmó una suba semestral del 10,1% con sumas no remunerativas, la conducción de Camioneros pegó el grito en el cielo: aseguran que la paritaria "se quedó corta" frente a la inflación real de la calle.</p>
+<p>El reclamo actual no es solo un retoque general, sino un aumento contundente del 20% sobre el adicional por profesionalidad para los choferes de rutas y larga distancia, buscando compensar el desgaste físico brutal que implica la tarea.</p>
+<p>El mensaje al Ministerio de Trabajo fue claro: si no se sientan a renegociar este punto específico antes de que cierre el mes, el paro logístico es inminente. El gobierno busca calma, pero los camiones amenazan con frenar el país.</p>
+</div>
+<div class="hidden-criollo" hidden="">
+<ul>
+<li>Camioneros avisó que el aumento que habían firmado antes se lo comió la inflación.</li>
+<li>Están exigiendo que le suban un 20% extra a los choferes que hacen larga distancia.</li>
+<li>Si las cámaras empresarias se hacen las distraídas, el gremio amenaza con frenar la logística nacional.</li>
+</ul>
+</div>
+</a>
+</article>
+<!-- Nota 3 -->
+<article class="subnote-card" id="nota-reforma">
+<a class="subnote-link leer-nota" href="#nota-reforma">
+<div class="subnote-body">
+<span class="subnote-category">Justicia</span>
+<h3 class="subnote-title">La Justicia frena topes indemnizatorios de la Reforma Laboral</h3>
+<p class="subnote-resume">Jueces de Tucumán y Jujuy declararon inconstitucional ponerle techo a la plata de los despidos.</p>
+<div class="subnote-meta"><time datetime="2026-09-11">Hace 6 horas</time> <span>·</span> <span>3 min de lectura</span><button aria-label="Compartir en WhatsApp" class="inline-whatsapp-btn share-btn-wa" data-id="nota-reforma" data-title="La Justicia frena topes indemnizatorios de la Reforma Laboral"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></button></div>
+</div>
+<div class="hidden-desarrollo" hidden="">
+<p>Un duro revés para la reforma laboral del oficialismo llegó desde los tribunales del interior. La Justicia del Trabajo falló en casos clave declarando inconstitucional el artículo 55 de la nueva normativa, que buscaba establecer techos y topes estrictos al cálculo de indemnizaciones por despido sin causa.</p>
+<p>En Tucumán sentenciaron que recortar la liquidación vulnera el artículo 14 bis. Casi al mismo tiempo, en Jujuy se rechazó la aplicación de esos topes para un laburante, elevando su resarcimiento a casi $160 millones al considerar confiscatorios los nuevos parámetros de la ley.</p>
+<p>Este doble fallo abre la puerta a una avalancha de amparos en todo el país. La Casa Rosada mira de reojo cómo la Justicia le empieza a desarmar los cimientos de su reforma flexibilizadora.</p>
+</div>
+<div class="hidden-criollo" hidden="">
+<ul>
+<li>La ley de Milei le ponía topes máximos a la plata que te tienen que pagar si te rajan.</li>
+<li>Jueces del interior dijeron que eso es inconstitucional y mandaron a pagar indemnizaciones completas.</li>
+<li>Es una victoria inmensa: si te despiden sin causa, las empresas no van a poder usar la reforma para liquidarte chirolas.</li>
+</ul>
+</div>
+</a>
+</article>
+<!-- Nota 4 -->
+<article class="subnote-card" id="nota-cargill">
+<a class="subnote-link leer-nota" href="#nota-cargill">
+<div class="subnote-body">
+<span class="subnote-category">Logística</span>
+<h3 class="subnote-title">Reabre Cargill, pero fleteros amenazan con paralizar puertos bonaerenses</h3>
+<p class="subnote-resume">La multinacional volvió a operar en Arribeños, pero el conflicto por 30 transportistas excluidos sigue al rojo vivo.</p>
+<div class="subnote-meta"><time datetime="2026-09-11">Ayer</time> <span>·</span> <span>3 min de lectura</span><button aria-label="Compartir en WhatsApp" class="inline-whatsapp-btn share-btn-wa" data-id="nota-cargill" data-title="Reabre Cargill, pero fleteros amenazan con paralizar puertos bonaerenses"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></button></div>
+</div>
+<div class="hidden-desarrollo" hidden="">
+<p>Después de más de dos meses de paralización, Cargill reabrió las puertas de su gigantesca planta de acopio en Arribeños, bajo un fuerte operativo de seguridad. Sin embargo, lejos de estar solucionado, el conflicto acaba de escalar a nivel provincial.</p>
+<p>El Sindicato Único de Fleteros advirtió que paralizarán la totalidad de los puertos bonaerenses si la multinacional no reincorpora a 30 transportistas que fueron apartados de la operatoria. Según denuncian las bases, el despido masivo fue una represalia por haber expuesto el cobro de comisiones "en negro" dentro del sistema de cargas.</p>
+<p>Si no se llega a un acuerdo urgente, la medida de fuerza de los fleteros promete bloquear el ingreso de dólares por la exportación de la cosecha en el momento más crítico para las reservas del Central.</p>
+</div>
+<div class="hidden-criollo" hidden="">
+<ul>
+<li>Cargill abrió su planta después de 2 meses de paro, pero dejó a 30 camiones afuera.</li>
+<li>Los fleteros denuncian que los marginaron por mandar al frente un curro de comisiones en negro.</li>
+<li>Si no los reincorporan, el sindicato amenaza con un bloqueo total en todos los puertos de la provincia.</li>
+</ul>
+</div>
+</a>
+</article>
+</div>
+</section>
+<!-- POLITICS & ECONOMY -->
+<section aria-label="Noticias de Politica y Economia" class="politics-section">
+<h2 class="section-title">Política y Economía</h2>
+<div class="politics-grid">
+<article class="politics-card" id="nota-inflacion">
+<a class="politics-link leer-nota" href="#nota-inflacion">
+<div class="politics-body">
+<span class="politics-category">INFLACIÓN Y BOLSILLO</span>
+<h3 class="politics-title">Inflación baja, pero necesitás $1.6M para no ser pobre</h3>
+<p class="politics-resume">El INDEC festejó el 1,7% de agosto. La contracara: la canasta básica subió 2,6% y liquida los sueldos de convenio.</p>
+<div class="hidden-desarrollo" hidden="">
+<p>El Gobierno celebra que la inflación de agosto bajó al 1,7%, el registro más bajo del año. Sin embargo, la realidad paralela del supermercado muestra otra cara: la canasta básica total pegó un salto del 2,6% y fijó la línea de pobreza familiar por encima de los 1.600.000 pesos.</p>
+<p>Esta desconexión explica por qué los sueldos no alcanzan. Los aumentos se concentraron en los consumos más rígidos: tarifas eléctricas, gas y transporte. Esto anula por completo el alivio del IPC general para la clase trabajadora.</p>
+<p>Mientras la gran mayoría de los convenios colectivos tienen básicos de ingreso que rondan el millón de pesos (como comercio o seguridad), los hogares se ven empujados al pluriempleo o al endeudamiento con tarjeta de crédito solo para llegar a fin de mes.</p>
+</div>
+<div class="hidden-criollo" hidden="">
+<ul>
+<li>El gobierno festeja que la inflación promedio bajó a 1,7%.</li>
+<li>Pero la comida, la luz y el bondi subieron un 2,6%. Necesitás $1.6 palos para no ser pobre.</li>
+<li>La mayoría de los sueldos básicos del país no llegan ni a la mitad de esa plata.</li>
+</ul>
+</div>
+<div class="politics-meta"><time datetime="2026-09-11">Hace 2 horas</time> <span>·</span> <span>3 min de lectura</span><button aria-label="Compartir en WhatsApp" class="inline-whatsapp-btn share-btn-wa" data-id="nota-inflacion" data-title="Inflación baja, pero necesitás $1.6M para no ser pobre"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></button></div>
+</div>
+</a>
+</article>
+<article class="politics-card" id="nota-empleo">
+<a class="politics-link leer-nota" href="#nota-empleo">
+<div class="politics-body">
+<span class="politics-category">EMPLEO</span>
+<h3 class="politics-title">Alarma oficial: el empleo registrado cayó por 13° mes consecutivo</h3>
+<p class="politics-resume">Construcción, industria y comercio lideran la sangría de puestos de trabajo en blanco a nivel nacional.</p>
+<div class="hidden-desarrollo" hidden="">
+<p>Las luces rojas del mercado laboral siguen encendidas. Los datos oficiales del SIPA confirmaron el peor escenario: el número de trabajadores formales privados retrocedió por décimo tercer mes consecutivo, retrocediendo a niveles que no se veían desde 2014.</p>
+<p>La caída del consumo interno y la recesión generalizada golpearon de lleno a la industria manufacturera, la construcción y el comercio minorista. En la calle, el efecto es el cierre de sucursales, suspensiones preventivas y un congelamiento total de las contrataciones jóvenes.</p>
+<p>Los únicos sectores que están absorbiendo mano de obra son el monotributo precario, las changas y el trabajo no registrado en aplicaciones de delivery, donde los pibes terminan pedaleando sin aportes, ART ni días por enfermedad.</p>
+</div>
+<div class="hidden-criollo" hidden="">
+<ul>
+<li>Hace más de un año ininterrumpido que se destruyen puestos de laburo en blanco en Argentina.</li>
+<li>Comercio, construcción y fábricas son los que más gente vienen dejando en la calle.</li>
+<li>El que se queda sin laburo termina obligado a agarrar la bici para una app, sin derechos ni aportes.</li>
+</ul>
+</div>
+<div class="politics-meta"><time datetime="2026-09-11">Hace 5 horas</time> <span>·</span> <span>3 min de lectura</span><button aria-label="Compartir en WhatsApp" class="inline-whatsapp-btn share-btn-wa" data-id="nota-empleo" data-title="Alarma oficial: el empleo registrado cayó por 13° mes consecutivo"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></button></div>
+</div>
+</a>
+</article>
+<article class="politics-card" id="nota-marcha">
+<a class="politics-link leer-nota" href="#nota-marcha">
+<div class="politics-body">
+<span class="politics-category">EDUCACIÓN</span>
+<h3 class="politics-title">Crece la tensión y convocan a la gran Marcha Federal Universitaria</h3>
+<p class="politics-resume">Nodocentes, docentes y estudiantes preparan una movilización masiva para octubre reclamando por el presupuesto 2027.</p>
+<div class="hidden-desarrollo" hidden="">
+<p>El frente de conflicto en las universidades no encuentra tregua y vuelve a salir a las calles. La FATUN (nodocentes), junto a los gremios docentes y agrupaciones estudiantiles, ratificaron un plan de lucha nacional ante el desfasaje salarial y el recorte presupuestario.</p>
+<p>La medida central acordada es la convocatoria a una nueva y masiva Marcha Federal Universitaria para el mes de octubre, con el objetivo de presionar al Congreso en pleno debate del Presupuesto 2027.</p>
+<p>La comunidad educativa exige blindar partidas frente a un oficialismo que se aferra al déficit cero. Denuncian que los salarios de entrada para los docentes quedaron pulverizados por debajo de la línea de indigencia.</p>
+</div>
+<div class="hidden-criollo" hidden="">
+<ul>
+<li>Trabajadores, profesores y estudiantes van a salir a reventar las calles de nuevo en octubre.</li>
+<li>Denuncian que los sueldos quedaron destruidos y no alcanza para pagar la luz de las facultades.</li>
+<li>Buscan meterle presión al Congreso para que el año que viene no recorten más plata de la educación pública.</li>
+</ul>
+</div>
+<div class="politics-meta"><time datetime="2026-09-11">Ayer a la tarde</time> <span>·</span> <span>3 min de lectura</span><button aria-label="Compartir en WhatsApp" class="inline-whatsapp-btn share-btn-wa" data-id="nota-marcha" data-title="Crece la tensión y convocan a la gran Marcha Federal Universitaria"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></button></div>
+</div>
+</a>
+</article>
+<article class="politics-card" id="nota-bregman">
+<a class="politics-link leer-nota" href="#nota-bregman">
+<div class="politics-body">
+<span class="politics-category">IZQUIERDA</span>
+<h3 class="politics-title">Bregman descarta a Kicillof y convoca a la "Marcha de la Bronca"</h3>
+<p class="politics-resume">La dirigente del FIT rechaza armados conjuntos para 2027 y apuesta a la movilización callejera este 19 de septiembre.</p>
+<div class="hidden-desarrollo" hidden="">
+<p>Myriam Bregman le bajó el pulgar rotundamente a los rumores de una fórmula compartida con Axel Kicillof de cara a las elecciones presidenciales de 2027. La histórica dirigente de la izquierda aclaró que la orientación del gobernador no se acerca al FIT, sino a sectores más conservadores del PJ.</p>
+<p>Apostando a capitalizar su altísima imagen positiva en las encuestas, Bregman busca transformar la simpatía en los sondeos en organización territorial directa. Para ello, ratificó la conformación de cientos de comités de base.</p>
+<p>El próximo paso será la calle: convocó a una gran "marcha de la bronca" para el 19 de septiembre en reclamo por la situación de los salarios, y encabezará un acto en Rosario para unificar apoyos con gremios portuarios y docentes.</p>
+</div>
+<div class="hidden-criollo" hidden="">
+<ul>
+<li>Bregman cortó de raíz el humo: dijo que ni loca hace fórmula con Kicillof en 2027.</li>
+<li>Lidera las encuestas de imagen y busca transformar esos "likes" en gente militando en los barrios.</li>
+<li>Convocó a la "Marcha de la bronca" para este 19 de septiembre para protestar por los sueldos.</li>
+</ul>
+</div>
+<div class="politics-meta"><time datetime="2026-09-11">Ayer a la noche</time> <span>·</span> <span>2 min de lectura</span><button aria-label="Compartir en WhatsApp" class="inline-whatsapp-btn share-btn-wa" data-id="nota-bregman" data-title='Bregman descarta a Kicillof y convoca a la "Marcha de la Bronca"'><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></button></div>
+</div>
+</a>
+</article>
+</div>
+</section>
+<!-- FOOTER -->
+<!-- CATEGORIES -->
+<section aria-label="Categorias del portal" class="categories-section">
+<div class="container">
+<h2 class="section-title">Explora por tema</h2>
+<div class="categories-grid">
+<a class="category-btn" href="#salarios" id="salarios">
+<span class="category-icon">💰</span>
+<span class="category-label">Salarios</span>
+<span class="category-desc">Actualizaciones y escalas</span>
+</a>
+<a class="category-btn" href="#elecciones" id="elecciones">
+<span class="category-icon">🗳</span>
+<span class="category-label">Elecciones</span>
+<span class="category-desc">Listas, fechas y padrones</span>
+</a>
+<a class="category-btn" href="#denuncias" id="denuncias">
+<span class="category-icon">📢</span>
+<span class="category-label">Denuncias</span>
+<span class="category-desc">Irregularidades y reclamos</span>
+</a>
+<a class="category-btn" href="#base" id="base">
+<span class="category-icon">🏢</span>
+<span class="category-label">Base / Sucursales</span>
+<span class="category-desc">Noticias del interior</span>
+</a>
+</div>
+</div>
+</section>
+<!-- DENUNCIA SEGURA -->
+<section aria-label="Canal de denuncia segura" class="denuncia-section" id="denuncias">
+<div class="container">
+<div class="denuncia-card">
+<div aria-hidden="true" class="denuncia-icon">🔒</div>
+<div class="denuncia-body">
+<h2 class="denuncia-title">Denuncia de forma segura</h2>
+<p class="denuncia-desc">Tu identidad queda protegida. Usamos ProtonMail para que tu denuncia llegue a nuestra redacción sin rastro. Nunca publicamos datos personales sin autorización.</p>
+<a class="denuncia-btn" href="mailto:denuncias@gremio360.proton.me?subject=Denuncia%20Anonima%20Gremio%20360">
             Enviar denuncia anónima
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- NEWSLETTER -->
-  <section class="newsletter-section" aria-label="Suscripcion al newsletter">
-    <div class="container">
-      <div class="newsletter-inner">
-        <div class="newsletter-text">
-          <h2 class="newsletter-title">Recibí las noticias antes que nadie</h2>
-          <p class="newsletter-desc">Newsletter semanal. Sin spam. Solo lo importante del gremio.</p>
-        </div>
-        <form class="newsletter-form" action="#" method="post">
-          <label for="newsletter-email" class="sr-only">Tu correo electrónico</label>
-          <input type="email" id="newsletter-email" name="email" class="newsletter-input" placeholder="tu@correo.com" required autocomplete="email" />
-          <button type="submit" class="newsletter-btn">Suscribirme</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-logo">
-        <span class="mono-g">G</span><span class="mono-num">360</span>
-      </div>
-      <p class="footer-tagline">Periodismo de Base</p>
-      <nav class="footer-nav" aria-label="Navegacion del pie de pagina">
-        <a href="mailto:contacto@gremio360.proton.me" class="footer-link">Contacto Seguro (ProtonMail)</a>
-        <span class="footer-sep">&#183;</span>
-        <a href="#" class="footer-link">Aviso Legal</a>
-        <span class="footer-sep">&#183;</span>
-        <a href="#" class="footer-link">Politica de Privacidad</a>
-      </nav>
-      <p class="footer-legal">Gremio 360 es un medio independiente de informacion sindical. Las opiniones expresadas en las notas son de exclusiva responsabilidad de sus autores y no representan a ninguna lista, partido o agrupacion politica. La reproduccion del contenido esta permitida con mencion de la fuente.</p>
-      <p class="footer-copy">&#169; <span id="footer-year"></span> Gremio 360. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- FLOATING WHATSAPP FAB -->
-  <a href="https://wa.me/?text=Te%20comparto%20Gremio%20360%2C%20el%20portal%20de%20noticias%20gremiales%3A%20https%3A%2F%2Fgremio360.com.ar" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Compartir el sitio por WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    <span class="fab-label">Compartir</span>
-  </a>
-
-  
-  <!-- MODAL DE LECTURA (SPA) -->
-  <div id="article-modal" class="article-modal" aria-hidden="true" hidden>
-    <div class="modal-overlay" id="modal-overlay"></div>
-    <div class="modal-content" role="dialog" aria-modal="true">
-      <div class="modal-header">
-        <button class="modal-close" id="modal-close" aria-label="Cerrar">&times;</button>
-      </div>
-      <div class="modal-scroll-area">
-        <div class="modal-mode-switch" id="modal-mode-switch" hidden>
-          <button class="mode-pill-btn active" id="modal-mode-formal">Periodístico</button>
-          <button class="mode-pill-btn" id="modal-mode-criollo"><span class="mode-icon">⚡</span> En criollo (TL;DR)</button>
-        </div>
-        <span class="modal-cat" id="modal-cat"></span>
-        <h2 class="modal-title" id="modal-title"></h2>
-        <div class="modal-meta" id="modal-meta"></div>
-        <div class="modal-body" id="modal-body"></div>
-      </div>
-    </div>
-  </div>
-
-  <script src="main.js"></script>
-
-</body>
+            <svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M22 2L11 13"></path><path d="M22 2L15 22 11 13 2 9l20-7z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- NEWSLETTER -->
+<section aria-label="Suscripcion al newsletter" class="newsletter-section">
+<div class="container">
+<div class="newsletter-inner">
+<div class="newsletter-text">
+<h2 class="newsletter-title">Recibí las noticias antes que nadie</h2>
+<p class="newsletter-desc">Newsletter semanal. Sin spam. Solo lo importante del gremio.</p>
+</div>
+<form action="#" class="newsletter-form" method="post">
+<label class="sr-only" for="newsletter-email">Tu correo electrónico</label>
+<input autocomplete="email" class="newsletter-input" id="newsletter-email" name="email" placeholder="tu@correo.com" required="" type="email"/>
+<button class="newsletter-btn" type="submit">Suscribirme</button>
+</form>
+</div>
+</div>
+</section>
+<footer class="site-footer" role="contentinfo">
+<div class="container">
+<div class="footer-logo">
+<span class="mono-g">G</span><span class="mono-num">360</span>
+</div>
+<p class="footer-tagline">Periodismo de Base</p>
+<nav aria-label="Navegacion del pie de pagina" class="footer-nav">
+<a class="footer-link" href="mailto:contacto@gremio360.proton.me">Contacto Seguro (ProtonMail)</a>
+<span class="footer-sep">·</span>
+<a class="footer-link" href="#">Aviso Legal</a>
+<span class="footer-sep">·</span>
+<a class="footer-link" href="#">Politica de Privacidad</a>
+</nav>
+<p class="footer-legal">Gremio 360 es un medio independiente de informacion sindical. Las opiniones expresadas en las notas son de exclusiva responsabilidad de sus autores y no representan a ninguna lista, partido o agrupacion politica. La reproduccion del contenido esta permitida con mencion de la fuente.</p>
+<p class="footer-copy">© <span id="footer-year"></span> Gremio 360. Todos los derechos reservados.</p>
+</div>
+</footer>
+<!-- FLOATING WHATSAPP FAB -->
+<a aria-label="Compartir el sitio por WhatsApp" class="whatsapp-fab" href="https://wa.me/?text=Te%20comparto%20Gremio%20360%2C%20el%20portal%20de%20noticias%20gremiales%3A%20https%3A%2F%2Fgremio360.com.ar" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+<span class="fab-label">Compartir</span>
+</a>
+<!-- MODAL DE LECTURA (SPA) -->
+<div aria-hidden="true" class="article-modal" hidden="" id="article-modal">
+<div class="modal-overlay" id="modal-overlay"></div>
+<div aria-modal="true" class="modal-content" role="dialog">
+<div class="modal-header">
+<button aria-label="Cerrar" class="modal-close" id="modal-close">×</button>
+</div>
+<div class="modal-scroll-area">
+<div class="modal-mode-switch" hidden="" id="modal-mode-switch">
+<button class="mode-pill-btn active" id="modal-mode-formal">Periodístico</button>
+<button class="mode-pill-btn" id="modal-mode-criollo"><span class="mode-icon">⚡</span> En criollo (TL;DR)</button>
+</div>
+<span class="modal-cat" id="modal-cat"></span>
+<h2 class="modal-title" id="modal-title"></h2>
+<div class="modal-meta" id="modal-meta"></div>
+<div class="modal-body" id="modal-body"></div>
+</div>
+</div>
+</div>
+<script src="main.js"></script>
+</main></body>
 </html>

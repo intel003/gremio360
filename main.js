@@ -474,6 +474,7 @@ function initArticleModal() {
       if (btnCriollo) btnCriollo.classList.remove('active');
       
       modal.hidden = false;
+      if (container.id) history.pushState(null, null, '#' + container.id);
       document.body.style.overflow = 'hidden';
     });
 
@@ -498,9 +499,48 @@ function initArticleModal() {
     
     function closeModal() {
       modal.hidden = true;
+      history.pushState(null, null, window.location.pathname + window.location.search);
       document.body.style.overflow = '';
     }
     
+    
+    // --- WHATSAPP SHARE ---
+    document.querySelectorAll('.share-btn-wa').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var title = this.getAttribute('data-title');
+        var id = this.getAttribute('data-id');
+        var url = window.location.origin + window.location.pathname + '#' + id;
+        var text = 'Mirá esta nota en Gremio 360:\n*' + title + '*\n\n' + url;
+        window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+      });
+    });
+
+    // --- DEEP LINKING (Read hash on load) ---
+    function checkHashForModal() {
+      var hash = window.location.hash;
+      if (hash && hash.startsWith('#nota-')) {
+        var article = document.querySelector(hash);
+        if (article) {
+          var link = article.querySelector('.leer-nota') || article.classList.contains('leer-nota') ? article : null;
+          if (link) {
+            // Simulate click to open modal
+            // We need to extract the logic from the click listener or just dispatch an event
+            var event = new MouseEvent('click', {
+              bubbles: true,
+              cancelable: true,
+              view: window
+            });
+            article.querySelector('.leer-nota').dispatchEvent(event);
+          }
+        }
+      }
+    }
+    
+    // Call it after a small delay to ensure everything is initialized
+    setTimeout(checkHashForModal, 100);
+
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && !modal.hidden) {
         closeModal();
