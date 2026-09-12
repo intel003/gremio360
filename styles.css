@@ -667,10 +667,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px; height: 28px;
+  padding: 4px 12px;
+  height: 28px;
   background: var(--whatsapp);
   color: var(--white);
-  border-radius: 50%;
+  border-radius: 14px;
   transition: background var(--transition), transform var(--transition);
   -webkit-tap-highlight-color: transparent;
 }
