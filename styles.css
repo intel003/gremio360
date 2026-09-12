@@ -1985,12 +1985,12 @@ body {
 /* MODAL MODE SWITCH */
 .modal-mode-switch {
   display: flex;
-  background: var(--surface-light);
+  background: var(--bg-elevated);
   border-radius: 20px;
   padding: 4px;
   width: fit-content;
   margin-bottom: 16px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
 }
 .modal-mode-switch[hidden] {
   display: none !important;
