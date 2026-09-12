@@ -529,9 +529,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .subnote-card:hover .subnote-img { transform: scale(1.05); }
 
 .subnote-category {
-  position: absolute;
-  bottom: 6px;
-  left: 6px;
+  display: inline-block;
+  margin-bottom: 6px;
+  
   background: var(--accent);
   color: var(--white);
   font-size: .6rem;
