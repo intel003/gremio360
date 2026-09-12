@@ -321,7 +321,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .ticker-track {
   display: flex;
   white-space: nowrap;
-  animation: tickerScroll 36s linear infinite;
+  animation: tickerScroll 15s linear infinite;
 }
 .ticker-track:hover { animation-play-state: paused; }
 .ticker-item {
@@ -1975,4 +1975,10 @@ body {
 .holiday-type {
   color: var(--accent);
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .ticker-track {
+    animation: tickerScroll 10s linear infinite;
+  }
 }
