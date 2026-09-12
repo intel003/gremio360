@@ -339,37 +339,43 @@
     if (!select || !ofertaEl) return;
 
     var gremiosData = {
-      bancarios: {
-        oferta: '100% IPC INDEC', pedido: 'Gatillo automático mensual sin topes', estado: 'ACUERDO CERRADO',
-        estadoClass: 'paritaria-val', color: '#6B7280', dot: false,
-        reunion: 'Mensual automática tras difusión de inflación INDEC', startConflicto: null
-      },
-      seguridad: {
-        oferta: 'Básico $1.037.600 en sep. / Conf. $1.791.600', pedido: 'Básico de $1.085.000 / Conf. $1.930.000 (Dic)', estado: 'ACUERDO CERRADO',
-        estadoClass: 'paritaria-val', color: '#6B7280', dot: false,
-        reunion: 'Diciembre 2026', startConflicto: null
-      },
-      comercio: {
-        oferta: '5,7% trimestral + bono $50k + $120k NR', pedido: 'Incorporación de sumas al básico y revisión por IPC', estado: 'ACUERDO CERRADO',
-        estadoClass: 'paritaria-val', color: '#6B7280', dot: false,
-        reunion: 'Octubre 2026', startConflicto: null
-      },
-      uom: {
-        oferta: 'Anticipos a cuenta unilaterales siderúrgicos', pedido: 'Escala homologada siderúrgicos', estado: 'EN NEGOCIACION',
-        estadoClass: 'paritaria-estado', color: '#eab308', dot: true,
-        reunion: 'Audiencia en Secretaría de Trabajo', startConflicto: new Date(2026, 8, 1)
-      },
-      sanidad: {
-        oferta: 'Escalas CCT 120/75 + bono Sanidad $101.560', pedido: 'Absorción de adicionales a los básicos', estado: 'ACUERDO CERRADO',
-        estadoClass: 'paritaria-val', color: '#6B7280', dot: false,
-        reunion: 'Cuarto trimestre 2026', startConflicto: null
-      },
-      camioneros: {
-        oferta: 'Suma fija compensatoria y pauta límite 2%', pedido: 'Recomposición urgente retroactiva y suba viáticos', estado: 'EN NEGOCIACION',
-        estadoClass: 'paritaria-estado', color: '#eab308', dot: true,
-        reunion: 'Próxima audiencia en Trabajo', startConflicto: new Date(2026, 8, 10)
-      }
-    };
+    'comercio': {
+      oferta: '5,7% trimestral + Bono $120.000',
+      pedido: 'Revisión permanente sin topes',
+      estado: 'ACUERDO CERRADO (Último tramo en sep)',
+      reunion: 'Octubre 2026 (próxima revisión)'
+    },
+    'camioneros': {
+      oferta: '10,1% semestral (cerrado)',
+      pedido: 'Reapertura urgente + 20% extra por profesionalidad',
+      estado: 'EN NEGOCIACIÓN / TENSIÓN',
+      reunion: 'Audiencia pedida urgente'
+    },
+    'seguridad': {
+      oferta: '17,35% semestral (Básico Sept: $1.037.600)',
+      pedido: 'Conformado bruto $1.79M',
+      estado: 'ACUERDO CERRADO (Homologado)',
+      reunion: 'Diciembre 2026'
+    },
+    'bancarios': {
+      oferta: 'Cláusula gatillo mensual (1,7% en agosto)',
+      pedido: 'Sostener IPC + mejora del ROE para bases',
+      estado: 'ACUERDO CERRADO',
+      reunion: 'Actualización automática'
+    },
+    'uom': {
+      oferta: '23,5% homologado (Rama 17) / 14% escalonado',
+      pedido: 'Paro puntual en Bragado logró súper bono $1.3M',
+      estado: 'CERRADO (Con focos de conflicto)',
+      reunion: 'Febrero 2027 (Revisión gral)'
+    },
+    'sanidad': {
+      oferta: '7,3% + bonos fijos de hasta $90.000',
+      pedido: 'Aumento al básico sin componentes no remunerativos',
+      estado: 'ACUERDO CERRADO',
+      reunion: 'Último trimestre 2026'
+    }
+  };
 
     function updateParitaria() {
       var val = select.value;
