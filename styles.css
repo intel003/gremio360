@@ -416,7 +416,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   letter-spacing: -.02em;
 }
 
-.hero-lead {
+.hero-lead,
+.hero-resume {
   font-size: .97rem;
   color: var(--gray-700);
   line-height: 1.65;
@@ -986,8 +987,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   /* FAB: collapse to icon only on desktop so it's less intrusive */
   .whatsapp-fab { padding: 14px; border-radius: 50%; }
   .fab-label { display: none; }
-}
-
 }
 
 /* ============================================

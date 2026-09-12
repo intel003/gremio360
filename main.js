@@ -159,7 +159,7 @@
   /* ---------- 10. WhatsApp Channel Banner close ---------- */
   function initWaBanner() {
     var bar   = document.querySelector('.wa-channel-bar');
-    var close = document.getElementById('wa-channel-close');
+    var close = document.getElementById('wa-banner-close');
     if (!bar || !close) return;
 
     // Remember dismissed state per session
@@ -450,17 +450,13 @@ function initArticleModal() {
       
       currentDevHtml = devEl ? devEl.innerHTML : '<p>Contenido en desarrollo...</p>';
       if(currentDevHtml.indexOf('<p>') === -1) {
-        currentDevHtml = '<p>' + currentDevHtml.replace(/
-
-/g, '</p><p>') + '</p>';
+        currentDevHtml = '<p>' + currentDevHtml.replace(/\n\n/g, '</p><p>') + '</p>';
       }
       
       if (criolloEl) {
         currentCriolloHtml = criolloEl.innerHTML;
         if(currentCriolloHtml.indexOf('<ul>') === -1 && currentCriolloHtml.indexOf('<p>') === -1) {
-             currentCriolloHtml = '<p>' + currentCriolloHtml.replace(/
-
-/g, '</p><p>') + '</p>';
+             currentCriolloHtml = '<p>' + currentCriolloHtml.replace(/\n\n/g, '</p><p>') + '</p>';
         }
         if (modeSwitch) modeSwitch.hidden = false;
       } else {
@@ -510,7 +506,6 @@ function initArticleModal() {
         closeModal();
       }
     });
-  }
   }
 
   /* ---------- Init ---------- */
