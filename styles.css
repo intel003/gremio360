@@ -8,10 +8,10 @@
    Evita rojo/bordo/granate (Lista Granate / Negra y Roja),
    celeste/verde, azul (Oficialista) y naranja.            */
 :root {
-  --accent:        #9B1C1C;  /* Amarillo advertencia principal */
-  --accent-dark:   #7F1D1D;  /* Amarillo oscuro (hover/sombra) */
-  --accent-light:  #FEF2F2;  /* Fondo tenue amarillo */
-  --accent-mid:    #DC2626;  /* Amarillo brillante (Ã©nfasis) */
+  --accent:        #EAB308;  /* Amarillo advertencia principal */
+  --accent-dark:   #CA8A04;  /* Amarillo oscuro (hover/sombra) */
+  --accent-light:  #FEF9C3;  /* Fondo tenue amarillo */
+  --accent-mid:    #FACC15;  /* Amarillo brillante (Ã©nfasis) */
   --black:         #1C1C1E;  /* CarbÃ³n profundo */
   --gray-900:      #1F1F1F;
   --gray-700:      #374151;
@@ -1018,7 +1018,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   --gray-100:       #2C2C2E;
   --gray-50:        #1C1C1E;
   --white:          #2C2C2E;
-  --accent-light:   rgba(220, 38, 38, 0.15);
+  --accent-light:   rgba(234, 179, 8, 0.15);
 }
 
 body {
@@ -1232,7 +1232,7 @@ body {
   border-radius: var(--radius-md);
   border: 1px solid var(--accent);
   width: fit-content;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+  box-shadow: 0 4px 12px rgba(234, 179, 8, 0.15);
 }
 .counter-number {
   font-family: var(--font-serif);
@@ -1500,7 +1500,7 @@ body {
 }
 
 .criollo-card {
-  background: #fca5a5; /* Amarillo flÃºor/precauciÃ³n */
+  background: #fef08a; /* Amarillo flÃºor/precauciÃ³n */
   color: #713f12;
   border: 1.5px solid #eab308;
   border-radius: var(--radius-md);
@@ -1510,9 +1510,9 @@ body {
 }
 
 [data-theme="dark"] .criollo-card {
-  background: rgba(220, 38, 38, 0.12);
-  color: #fca5a5;
-  border-color: #b91c1c;
+  background: rgba(234, 179, 8, 0.12);
+  color: #fef08a;
+  border-color: #ca8a04;
 }
 
 .criollo-badge {
@@ -1669,13 +1669,13 @@ body {
   left: 0;
   bottom: 0;
   width: 0%;
-  background: rgba(220, 38, 38, 0.15);
+  background: rgba(234, 179, 8, 0.15);
   transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
 }
 
 [data-theme="dark"] .opt-bar {
-  background: rgba(220, 38, 38, 0.25);
+  background: rgba(234, 179, 8, 0.25);
 }
 
 /* Estado votado */
