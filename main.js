@@ -504,17 +504,18 @@ function initArticleModal() {
     }
     
     
-    // --- WHATSAPP SHARE ---
-    document.querySelectorAll('.share-btn-wa').forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
+    // --- WHATSAPP SHARE (Delegation for dynamic content) ---
+    document.body.addEventListener('click', function(e) {
+      var btn = e.target.closest('.share-btn-wa');
+      if (btn) {
         e.preventDefault();
         e.stopPropagation();
-        var title = this.getAttribute('data-title');
-        var id = this.getAttribute('data-id');
+        var title = btn.getAttribute('data-title');
+        var id = btn.getAttribute('data-id');
         var url = window.location.origin + window.location.pathname + '#' + id;
         var text = 'Mirá esta nota en Gremio 360:\n*' + title + '*\n\n' + url;
         window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
-      });
+      }
     });
 
     // --- DEEP LINKING (Read hash on load) ---
