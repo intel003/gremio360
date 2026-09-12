@@ -1,0 +1,83 @@
+[
+  {
+    "id": "nota-bausili",
+    "type": "hero",
+    "category": "ESCÁNDALO NACIONAL",
+    "title": "\"El oro no está auditado\": la verdad detrás del cruce a Bausili en el Senado",
+    "resume": "El titular del Central aseguró que las reservas que mandaron a Suiza estaban bajo control de la AGN. A las pocas horas, lo desmintieron con papeles oficiales.",
+    "date": "2026-09-11",
+    "timeLabel": "Hace 20 min"
+  },
+  {
+    "id": "nota-uom",
+    "type": "subnote",
+    "category": "Metalúrgicos",
+    "title": "UOM Bragado metió paro por tiempo indeterminado y logró súper bono",
+    "resume": "Paralizaron la fábrica Acerbrag y le torcieron el brazo a la patronal: cobran $1.3 millones extra.",
+    "date": "2026-09-11",
+    "timeLabel": "Hace 2 horas"
+  },
+  {
+    "id": "nota-camioneros",
+    "type": "subnote",
+    "category": "Camioneros",
+    "title": "Moyano exige reapertura urgente: va por un 20% extra para choferes",
+    "resume": "No se conforman con el 10,1% ya cerrado. Apuntan al plus por profesionalidad en larga distancia.",
+    "date": "2026-09-11",
+    "timeLabel": "Hace 4 horas"
+  },
+  {
+    "id": "nota-reforma",
+    "type": "subnote",
+    "category": "Justicia",
+    "title": "La Justicia frena topes indemnizatorios de la Reforma Laboral",
+    "resume": "Jueces de Tucumán y Jujuy declararon inconstitucional ponerle techo a la plata de los despidos.",
+    "date": "2026-09-11",
+    "timeLabel": "Hace 6 horas"
+  },
+  {
+    "id": "nota-cargill",
+    "type": "subnote",
+    "category": "Logística",
+    "title": "Reabre Cargill, pero fleteros amenazan con paralizar puertos bonaerenses",
+    "resume": "La multinacional volvió a operar en Arribeños, pero el conflicto por 30 transportistas excluidos sigue al rojo vivo.",
+    "date": "2026-09-11",
+    "timeLabel": "Ayer"
+  },
+  {
+    "id": "nota-inflacion",
+    "type": "politics",
+    "category": "INFLACIÓN Y BOLSILLO",
+    "title": "Inflación baja, pero necesitás $1.6M para no ser pobre",
+    "resume": "El INDEC festejó el 1,7% de agosto. La contracara: la canasta básica subió 2,6% y liquida los sueldos de convenio.",
+    "date": "2026-09-11",
+    "timeLabel": "Hace 2 horas"
+  },
+  {
+    "id": "nota-empleo",
+    "type": "politics",
+    "category": "EMPLEO",
+    "title": "Alarma oficial: el empleo registrado cayó por 13° mes consecutivo",
+    "resume": "Construcción, industria y comercio lideran la sangría de puestos de trabajo en blanco a nivel nacional.",
+    "date": "2026-09-11",
+    "timeLabel": "Hace 5 horas"
+  },
+  {
+    "id": "nota-marcha",
+    "type": "politics",
+    "category": "EDUCACIÓN",
+    "title": "Crece la tensión y convocan a la gran Marcha Federal Universitaria",
+    "resume": "Nodocentes, docentes y estudiantes preparan una movilización masiva para octubre reclamando por el presupuesto 2027.",
+    "date": "2026-09-11",
+    "timeLabel": "Ayer a la tarde"
+  },
+  {
+    "id": "nota-bregman",
+    "type": "politics",
+    "category": "IZQUIERDA",
+    "title": "Bregman descarta a Kicillof y convoca a la \"Marcha de la Bronca\"",
+    "resume": "La dirigente del FIT rechaza armados conjuntos para 2027 y apuesta a la movilización callejera este 19 de septiembre.",
+    "date": "2026-09-11",
+    "timeLabel": "Ayer a la noche"
+  }
+]

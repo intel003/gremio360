@@ -566,6 +566,77 @@ function initArticleModal() {
     initWeatherAndDollar();
     initParitarias();
     initArticleModal();
+
+    /* ---------- 14. SEARCH MODAL ---------- */
+    var searchBtn = document.querySelector('.search-btn');
+    var searchModal = document.getElementById('search-modal');
+    var searchClose = document.getElementById('search-close');
+    var searchOverlay = document.getElementById('search-overlay');
+    var searchInput = document.getElementById('search-input');
+    var searchResults = document.getElementById('search-results');
+    var noticiasDB = [];
+
+    function openSearch() {
+      if(!searchModal) return;
+      searchModal.hidden = false;
+      searchModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => searchInput.focus(), 100);
+      
+      // Fetch DB if not loaded
+      if (noticiasDB.length === 0) {
+        fetch('noticias.json')
+          .then(res => res.json())
+          .then(data => {
+            noticiasDB = data;
+          })
+          .catch(err => console.error('Error cargando noticias:', err));
+      }
+    }
+
+    function closeSearch() {
+      if(!searchModal) return;
+      searchModal.hidden = true;
+      searchModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      searchInput.value = '';
+      searchResults.innerHTML = '<p style="color:var(--text-muted); font-size:0.9rem; text-align:center; margin-top:32px;">Escribí arriba para buscar en nuestro archivo histórico.</p>';
+    }
+
+    if (searchBtn) searchBtn.addEventListener('click', openSearch);
+    if (searchClose) searchClose.addEventListener('click', closeSearch);
+    if (searchOverlay) searchOverlay.addEventListener('click', closeSearch);
+
+    if (searchInput) {
+      searchInput.addEventListener('input', function() {
+        var q = this.value.toLowerCase().trim();
+        if (q.length < 2) {
+          searchResults.innerHTML = '<p style="color:var(--text-muted); font-size:0.9rem; text-align:center; margin-top:32px;">Escribí arriba para buscar en nuestro archivo histórico.</p>';
+          return;
+        }
+        
+        var matches = noticiasDB.filter(function(n) {
+          return n.title.toLowerCase().includes(q) || n.resume.toLowerCase().includes(q) || n.category.toLowerCase().includes(q);
+        });
+
+        if (matches.length === 0) {
+          searchResults.innerHTML = '<p style="color:var(--text-muted); font-size:0.9rem; text-align:center; margin-top:32px;">No se encontraron noticias para "'+q+'"</p>';
+          return;
+        }
+
+        var html = '';
+        matches.forEach(function(n) {
+          // Build small card
+          html += '<article class="politics-card" style="margin-bottom:0; cursor:pointer;" onclick="window.location.href=\'' + window.location.pathname + '#' + n.id + '\'; window.location.reload();">';
+          html += '<span class="politics-category">' + n.category + '</span>';
+          html += '<h3 class="politics-title" style="font-size:1.1rem;">' + n.title + '</h3>';
+          html += '<div class="politics-meta">' + n.date + '</div>';
+          html += '</article>';
+        });
+        searchResults.innerHTML = html;
+      });
+    }
+
   });
 
 })();

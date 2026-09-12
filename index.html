@@ -460,5 +460,23 @@
 </div>
 </div>
 <script src="main.js"></script>
-</main></body>
+</main>
+  <!-- MODAL DE BÚSQUEDA -->
+  <div id="search-modal" class="article-modal" aria-hidden="true" hidden>
+    <div class="modal-overlay" id="search-overlay"></div>
+    <div class="modal-content" style="height:80vh;" role="dialog" aria-modal="true">
+      <div class="modal-header" style="justify-content: flex-start; gap: 16px; align-items: center; background: var(--bg-elevated);">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-muted);"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="search-input" placeholder="Buscar noticias (ej: paritarias, UOM...)" style="flex:1; background:transparent; border:none; color:var(--text-primary); font-size:1.1rem; outline:none; font-family:var(--font-sans);" autocomplete="off">
+        <button class="modal-close" id="search-close" aria-label="Cerrar">&times;</button>
+      </div>
+      <div class="modal-scroll-area" style="padding: 16px;">
+        <div id="search-results" style="display:flex; flex-direction:column; gap:16px;">
+          <p style="color:var(--text-muted); font-size:0.9rem; text-align:center; margin-top:32px;">Escribí arriba para buscar en nuestro archivo histórico.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
 </html>
