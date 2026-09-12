@@ -1,5 +1,41 @@
 [
   {
+    "id": "nota-cgt-papa",
+    "type": "politics",
+    "category": "Sindical Internacional",
+    "title": "La CGT se reúne con el Papa por el empleo, los salarios y el avance de la IA",
+    "resume": "La cúpula sindical mantuvo una audiencia en el Vaticano para plantear la crisis social y tecnológica en Argentina.",
+    "date": "2026-09-12",
+    "timeLabel": "Hace 5 horas"
+  },
+  {
+    "id": "nota-autofarma",
+    "type": "subnote",
+    "category": "Crisis y Despidos",
+    "title": "Cerró la cadena patagónica Autofarma: 17 locales clausurados y 210 despidos",
+    "resume": "La histórica firma bajó las persianas en Santa Cruz y Tierra del Fuego debiendo tres meses de sueldos y aguinaldos.",
+    "date": "2026-09-12",
+    "timeLabel": "Hace 4 horas"
+  },
+  {
+    "id": "nota-flybondi",
+    "type": "subnote",
+    "category": "Elecciones Gremiales",
+    "title": "Histórico: Aeronavegantes logró meter delegados de base en la low-cost Flybondi",
+    "resume": "Los tripulantes de cabina eligieron por primera vez representación sindical formal fuera del gremio de empresa patronal.",
+    "date": "2026-09-12",
+    "timeLabel": "Hace 3 horas"
+  },
+  {
+    "id": "nota-kicillof",
+    "type": "hero",
+    "category": "PARITARIAS PROVINCIALES",
+    "title": "Gremios bonaerenses se plantan ante Kicillof: \"Con esta inflación, sentate a negociar\"",
+    "resume": "Tras el dato de inflación, docentes, estatales y judiciales le exigieron al gobernador la reapertura urgente de la discusión salarial.",
+    "date": "2026-09-12",
+    "timeLabel": "Hace 1 hora"
+  },
+  {
     "id": "nota-bausili",
     "type": "hero",
     "category": "ESCÁNDALO NACIONAL",

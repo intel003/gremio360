@@ -726,6 +726,94 @@ function initArticleModal() {
       });
     });
 
+
+    // --- PREMIUM FEATURES (GODLY / 21st.dev) ---
+
+    // 1. Reading Progress Bar
+    var modalScrollArea = document.querySelector('.modal-scroll-area');
+    var progressBar = document.getElementById('reading-progress');
+    if (modalScrollArea && progressBar) {
+      modalScrollArea.addEventListener('scroll', function() {
+        var scrollTop = modalScrollArea.scrollTop;
+        var scrollHeight = modalScrollArea.scrollHeight - modalScrollArea.clientHeight;
+        var progress = (scrollTop / scrollHeight) * 100;
+        progressBar.style.width = progress + '%';
+      });
+    }
+
+    // 2. Spotlight Hover Effect
+    document.querySelectorAll('.spotlight-card').forEach(function(card) {
+      card.addEventListener('mousemove', function(e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        card.style.setProperty('--x', x + 'px');
+        card.style.setProperty('--y', y + 'px');
+      });
+    });
+
+    // 3. Scroll Reveal Intersection Observer
+    var reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var revealObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // Reveal only once
+          }
+        });
+      }, { rootMargin: "0px 0px -50px 0px" });
+      
+      reveals.forEach(function(reveal) {
+        revealObserver.observe(reveal);
+      });
+    } else {
+      reveals.forEach(function(reveal) { reveal.classList.add('active'); });
+    }
+
+    // 4. Duplicate Ticker for Infinite Marquee
+    var tickerTrack = document.getElementById('ticker-track');
+    if (tickerTrack) {
+      // Duplicate inner HTML to make it loop seamlessly
+      tickerTrack.innerHTML += tickerTrack.innerHTML;
+    }
+
+    // 5. QR Code Modal Logic
+    var qrModal = document.getElementById('qr-modal');
+    var qrClose = document.getElementById('qr-close');
+    var qrOverlay = document.getElementById('qr-overlay');
+    var qrImg = document.getElementById('qr-image');
+
+    function closeQr() {
+      if(qrModal) {
+        qrModal.hidden = true;
+        qrModal.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    if (qrClose) qrClose.addEventListener('click', closeQr);
+    if (qrOverlay) qrOverlay.addEventListener('click', closeQr);
+
+    document.body.addEventListener('click', function(e) {
+      var btn = e.target.closest('.qr-btn');
+      if (btn) {
+        e.preventDefault();
+        e.stopPropagation();
+        var id = btn.getAttribute('data-id');
+        var url = window.location.origin + window.location.pathname + '#' + id;
+        
+        // Generate QR code using public API
+        var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=10&data=' + encodeURIComponent(url);
+        
+        if (qrImg && qrModal) {
+          qrImg.src = qrUrl;
+          qrModal.hidden = false;
+          qrModal.setAttribute('aria-hidden', 'false');
+          // Important: make sure it's on top of other modals if one is open
+        }
+      }
+    });
+
   });
 
 })();

@@ -1996,3 +1996,107 @@ body {
 .modal-mode-switch[hidden] {
   display: none !important;
 }
+
+
+/* ============================================
+   GODLY & 21st.dev PREMIUM FEATURES
+   ============================================ */
+
+/* 1. Progress Bar */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), #ff6b6b);
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
+}
+
+/* 2. Glassmorphism Header */
+.site-header {
+  background: rgba(18, 18, 18, 0.75) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 3. Glassmorphism Modals */
+.article-modal .modal-content, .search-modal .modal-content {
+  background: rgba(24, 24, 24, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* 4. Infinite Marquee Ticker */
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* 5. Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); /* Apple-like easing */
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 6. Spotlight Glow on Hover */
+.spotlight-card {
+  position: relative;
+}
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  top: var(--y, -100%);
+  left: var(--x, -100%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+  border-radius: inherit;
+}
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+/* QR Button Styles */
+.inline-qr-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+  border-radius: 50%;
+  margin-left: 6px;
+  transition: background var(--transition), transform var(--transition);
+  border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+}
+.inline-qr-btn:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.1);
+}
