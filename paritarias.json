@@ -1,0 +1,38 @@
+﻿{
+  "comercio": {
+    "oferta": "5,7% trimestral + Bono $120.000",
+    "pedido": "Revisión permanente sin topes",
+    "estado": "ACUERDO CERRADO (último tramo en sep)",
+    "reunion": "Octubre 2026 (próxima revisión)"
+  },
+  "camioneros": {
+    "oferta": "10,1% semestral (cerrado)",
+    "pedido": "Reapertura urgente + 20% extra por profesionalidad",
+    "estado": "EN NEGOCIACIÓN / TENSIÓN",
+    "reunion": "Audiencia pedida urgente"
+  },
+  "seguridad": {
+    "oferta": "17,35% semestral (Básico Sept: $1.037.600)",
+    "pedido": "Conformado bruto $1.79M",
+    "estado": "ACUERDO CERRADO (Homologado)",
+    "reunion": "Diciembre 2026"
+  },
+  "bancarios": {
+    "oferta": "Cláusula gatillo mensual (1,7% en agosto)",
+    "pedido": "Sostener IPC + mejora del ROE para bases",
+    "estado": "ACUERDO CERRADO",
+    "reunion": "Actualización automática"
+  },
+  "uom": {
+    "oferta": "23,5% homologado (Rama 17) / 14% escalonado",
+    "pedido": "Paro puntual en Bragado logró súper bono $1.3M",
+    "estado": "CERRADO (Con focos de conflicto)",
+    "reunion": "Febrero 2027 (Revisión gral)"
+  },
+  "sanidad": {
+    "oferta": "7,3% + bonos fijos de hasta $90.000",
+    "pedido": "Aumento al básico sin componentes no remunerativos",
+    "estado": "ACUERDO CERRADO",
+    "reunion": "Último trimestre 2026"
+  }
+}

@@ -333,49 +333,12 @@
     var pedidoEl = document.getElementById('paritaria-pedido');
     var estadoText = document.getElementById('paritaria-estado-text');
     var reunionEl = document.getElementById('paritaria-reunion');
-    var conflictDays = document.getElementById('conflict-days');
-    var conflictWidget = document.getElementById('conflict-widget');
+    var conflictWidget = document.getElementById('paritaria-conflict-widget');
+    var conflictDays = document.getElementById('paritaria-conflict-days');
 
     if (!select || !ofertaEl) return;
 
-    var gremiosData = {
-    'comercio': {
-      oferta: '5,7% trimestral + Bono $120.000',
-      pedido: 'Revisión permanente sin topes',
-      estado: 'ACUERDO CERRADO (Último tramo en sep)',
-      reunion: 'Octubre 2026 (próxima revisión)'
-    },
-    'camioneros': {
-      oferta: '10,1% semestral (cerrado)',
-      pedido: 'Reapertura urgente + 20% extra por profesionalidad',
-      estado: 'EN NEGOCIACIÓN / TENSIÓN',
-      reunion: 'Audiencia pedida urgente'
-    },
-    'seguridad': {
-      oferta: '17,35% semestral (Básico Sept: $1.037.600)',
-      pedido: 'Conformado bruto $1.79M',
-      estado: 'ACUERDO CERRADO (Homologado)',
-      reunion: 'Diciembre 2026'
-    },
-    'bancarios': {
-      oferta: 'Cláusula gatillo mensual (1,7% en agosto)',
-      pedido: 'Sostener IPC + mejora del ROE para bases',
-      estado: 'ACUERDO CERRADO',
-      reunion: 'Actualización automática'
-    },
-    'uom': {
-      oferta: '23,5% homologado (Rama 17) / 14% escalonado',
-      pedido: 'Paro puntual en Bragado logró súper bono $1.3M',
-      estado: 'CERRADO (Con focos de conflicto)',
-      reunion: 'Febrero 2027 (Revisión gral)'
-    },
-    'sanidad': {
-      oferta: '7,3% + bonos fijos de hasta $90.000',
-      pedido: 'Aumento al básico sin componentes no remunerativos',
-      estado: 'ACUERDO CERRADO',
-      reunion: 'Último trimestre 2026'
-    }
-  };
+    var gremiosData = {};
 
     function updateParitaria() {
       var val = select.value;
@@ -388,22 +351,27 @@
 
       var dotHtml = data.dot ? '<span class="estado-dot" style="background:' + data.color + '"></span> ' : '';
       estadoText.innerHTML = dotHtml + data.estado;
-      estadoText.style.color = data.color;
+      estadoText.style.color = data.color || '';
 
-      // Update conflict counter
       if (data.startConflicto) {
         conflictWidget.style.display = 'flex';
         var now = new Date();
-        var diffTime = Math.abs(now - data.startConflicto);
+        var diffTime = Math.abs(now - new Date(data.startConflicto));
         var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
         conflictDays.textContent = diffDays;
       } else {
-        conflictWidget.style.display = 'none';
+        if(conflictWidget) conflictWidget.style.display = 'none';
       }
     }
 
-    select.addEventListener('change', updateParitaria);
-    updateParitaria();
+    fetch('paritarias.json?v=' + Date.now())
+      .then(res => res.json())
+      .then(data => {
+        gremiosData = data;
+        select.addEventListener('change', updateParitaria);
+        updateParitaria();
+      })
+      .catch(err => console.error("Error loading paritarias:", err));
   }
 
   
@@ -771,12 +739,20 @@ function initArticleModal() {
       reveals.forEach(function(reveal) { reveal.classList.add('active'); });
     }
 
-    // 4. Duplicate Ticker for Infinite Marquee
+    
+    // 4. Duplicate Ticker for Infinite Marquee (with accessibility)
     var tickerTrack = document.getElementById('ticker-track');
-    if (tickerTrack) {
-      // Duplicate inner HTML to make it loop seamlessly
-      tickerTrack.innerHTML += tickerTrack.innerHTML;
+    if (tickerTrack && !tickerTrack.hasAttribute('data-cloned')) {
+      var clone = tickerTrack.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      clone.removeAttribute('id');
+      // Append children from clone to original
+      while (clone.firstChild) {
+        tickerTrack.appendChild(clone.firstChild);
+      }
+      tickerTrack.setAttribute('data-cloned', 'true');
     }
+
 
     // 5. QR Code Modal Logic
     var qrModal = document.getElementById('qr-modal');
