@@ -470,7 +470,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .btn--whatsapp {
   background: var(--whatsapp);
-  color: var(--white);
+  color: #ffffff;
   box-shadow: 0 2px 8px rgba(37,211,102,.3);
 }
 .btn--whatsapp:hover {
@@ -2128,7 +2128,7 @@ body {
   width: 28px;
   height: 28px;
   background: rgba(255,255,255,0.1);
-  color: var(--white);
+  color: #ffffff;
   border-radius: 50%;
   margin-left: 6px;
   transition: background var(--transition), transform var(--transition);

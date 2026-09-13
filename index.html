@@ -13,7 +13,7 @@
 
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 
-<link href="styles.css?v=8" rel="stylesheet"/>
+<link href="styles.css?v=10" rel="stylesheet"/>
 <link as="image" fetchpriority="high" href="hero-jovenes.avif" rel="preload" type="image/avif"/></head>
 <body><div id="reading-progress"></div>
 <!-- HEADER -->
@@ -125,7 +125,7 @@
 <div class="paritaria-next" id="paritaria-reunion">Proxima reunion: <strong>Lunes 15 de septiembre</strong></div>
 </div>
 </div>
-<div class="conflict-counter" id="conflict-widget">
+<div class="conflict-counter" id="conflict-widget" style="display:none;">
 <div class="counter-number" id="conflict-days">0</div>
 <div class="counter-label">dias<br/>en conflicto</div>
 </div>
@@ -180,41 +180,69 @@
 </a>
 </article>
 <!-- Nota 2 -->
-<article class="subnote-card spotlight-card" id="nota-flybondi">
-<a class="subnote-link leer-nota" href="#nota-flybondi">
-<div class="subnote-body">
-<span class="subnote-category">Elecciones Gremiales</span>
-<h3 class="subnote-title">Histórico: Aeronavegantes logró meter delegados de base en la low-cost Flybondi</h3>
-<p class="subnote-resume">Los tripulantes de cabina eligieron por primera vez representación sindical formal fuera del gremio de empresa patronal.</p>
-<div class="subnote-meta"><time datetime="2026-09-12">Hace 3 horas</time> <span>·</span> <span>4 min de lectura</span><button aria-label="Compartir en WhatsApp" class="inline-whatsapp-btn share-btn-wa" data-id="nota-flybondi" data-title="Histórico: Aeronavegantes logró meter delegados de base en la low-cost Flybondi"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg><span style="margin-left:6px; font-weight:700; font-size:0.85rem;">Compartir</span></button><button class="qr-btn inline-qr-btn" data-id="nota-flybondi" title="Mostrar QR para escanear"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="14" y="14"></rect><rect height="7" width="7" x="3" y="14"></rect></svg></button></div>
-</div>
-<div class="hidden-desarrollo" hidden=""><p>En un hecho que marca un punto de inflexión en la aviación aerocomercial argentina, la Asociación Argentina de Aeronavegantes llevó adelante la primera elección democrática de delegados de base dentro de la empresa low-cost Flybondi. Durante casi una década, las aerolíneas de bajo costo operaron bajo estructuras de sindicatos patronales internos que impedían la afiliación a las entidades tradicionales.</p><p>Desde Aeronavegantes denunciaron que durante años los trabajadores que intentaron organizarse sufrieron sanciones o persecuciones, pero que la necesidad de defender salarios y condiciones de vuelo empujó la conformación de la representación gremial con personería jurídica.</p><p>Con este resultado, los tripulantes de cabina contarán por primera vez con el respaldo institucional de un convenio colectivo formal para sentarse a discutir escalas, turnos de descanso y seguridad laboral.</p></div>
-<div class="hidden-criollo" hidden=""><ul><li>Por primera vez en 10 años, los tripulantes de Flybondi eligieron delegados de un sindicato nacional en serio.</li><li>Rompieron el bloqueo de la empresa, que los obligaba a estar en un 'sindicato amarillo' armado por los jefes.</li><li>Ahora van a poder pelear sueldos y descansos con el respaldo legal que corresponde.</li></ul></div>
-</a>
+<article class="subnote-card spotlight-card" id="nota-diacomercio">
+  <a class="subnote-link leer-nota" href="#nota-diacomercio">
+          <div class="subnote-body">
+            <span class="subnote-category" style="background:#EAB308; color:#1C1C1E;">COMERCIO (FAECYS)</span>
+            <h3 class="subnote-title">Confirmado: Trasladan el feriado por el Día del Empleado de Comercio al lunes 28</h3>
+            <p class="subnote-resume">La FAECYS y las cámaras empresarias acordaron mover el feriado del 26 de septiembre para garantizar un fin de semana largo. No podrá ser usado como franco compensatorio.</p>
+            <div class="subnote-meta">
+              <time datetime="2026-09-12">Hace 1 hora</time>
+              <span>&bull;</span>
+              <span>2 min de lectura</span>
+              <button class="inline-whatsapp-btn share-btn-wa" data-title="Trasladan el feriado por el Día del Empleado de Comercio al lunes 28" data-id="nota-diacomercio" aria-label="Compartir en WhatsApp">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+                <span style="margin-left:6px; font-weight:700; font-size:0.85rem;">Compartir</span>
+              </button>
+              <button class="qr-btn inline-qr-btn" title="Mostrar QR para escanear" data-id="nota-diacomercio">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+        <div class="hidden-desarrollo" hidden>
+          <p>Atento a lo ratificado por la Ley 26.541 que instituye el 26 de septiembre como el día del Empleado de Comercio, la FAECYS (Federación Argentina de Empleados de Comercio y Servicios) junto a la CAC, CAME y UDECA han acordado trasladar la conmemoración al <strong>lunes 28 de septiembre de 2026</strong>.</p>
+          <p>En la circular firmada por Armando Cavalieri y Daniel Lovera, se destaca que el objetivo es que los trabajadores puedan celebrar su día con un descanso continuado. Además, se dejó expresamente aclarado que <strong>no se podrá otorgar este lunes como franco compensatorio</strong> de descanso semanal, debiendo liquidarse conforme a las normas legales vigentes.</p>
+        </div>
+        <div class="hidden-criollo" hidden>
+          <ul>
+            <li>El Día del Empleado de Comercio (26 de septiembre) se pasa al lunes 28 de septiembre.</li>
+            <li>Fin de semana largo asegurado para todos los mercantiles del país.</li>
+            <li>Ojo: Si tu empleador te da el lunes libre, NO cuenta como tu franco semanal normal. Te corresponden los dos.</li>
+          </ul>
+        </div>
 </article>
 <!-- Nota 3 -->
-<article class="subnote-card spotlight-card" id="nota-reforma">
-<a class="subnote-link leer-nota" href="#nota-reforma">
-<div class="subnote-body">
-<span class="subnote-category">Justicia</span>
-<h3 class="subnote-title">La Justicia frena topes indemnizatorios de la Reforma Laboral</h3>
-<p class="subnote-resume">Jueces de Tucumán y Jujuy declararon inconstitucional ponerle techo a la plata de los despidos.</p>
-<div class="subnote-meta"><time datetime="2026-09-11">Hace 6 horas</time> <span>·</span> <span>3 min de lectura</span><button aria-label="Compartir en WhatsApp" class="inline-whatsapp-btn share-btn-wa" data-id="nota-reforma" data-title="La Justicia frena topes indemnizatorios de la Reforma Laboral"><svg fill="currentColor" height="14" viewbox="0 0 24 24" width="14"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg><span style="margin-left:6px; font-weight:700; font-size:0.85rem;">Compartir</span></button><button class="qr-btn inline-qr-btn" data-id="nota-reforma" title="Mostrar QR para escanear"><svg fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="14" y="14"></rect><rect height="7" width="7" x="3" y="14"></rect></svg></button></div>
-</div>
-<div class="hidden-desarrollo" hidden="">
-<p>Un duro revés para la reforma laboral del oficialismo llegó desde los tribunales del interior. La Justicia del Trabajo falló en casos clave declarando inconstitucional el artículo 55 de la nueva normativa, que buscaba establecer techos y topes estrictos al cálculo de indemnizaciones por despido sin causa.</p>
-<p>En Tucumán sentenciaron que recortar la liquidación vulnera el artículo 14 bis. Casi al mismo tiempo, en Jujuy se rechazó la aplicación de esos topes para un laburante, elevando su resarcimiento a casi $160 millones al considerar confiscatorios los nuevos parámetros de la ley.</p>
-<p>Este doble fallo abre la puerta a una avalancha de amparos en todo el país. La Casa Rosada mira de reojo cómo la Justicia le empieza a desarmar los cimientos de su reforma flexibilizadora.</p>
-</div>
-<div class="hidden-criollo" hidden="">
-<ul>
-<li>La ley de Milei le ponía topes máximos a la plata que te tienen que pagar si te rajan.</li>
-<li>Jueces del interior dijeron que eso es inconstitucional y mandaron a pagar indemnizaciones completas.</li>
-<li>Es una victoria inmensa: si te despiden sin causa, las empresas no van a poder usar la reforma para liquidarte chirolas.</li>
-</ul>
-</div>
-</a>
-</article>
+<article class="subnote-card spotlight-card" id="nota-homologacion"><a class="subnote-link leer-nota" href="#nota-homologacion">
+          <div class="subnote-body">
+            <span class="subnote-category" style="background:#EAB308; color:#1C1C1E;">PARITARIAS</span>
+            <h3 class="subnote-title">Oficial: Trabajo homologó el último acuerdo paritario de Comercio (CCT 130/75)</h3>
+            <p class="subnote-resume">La Secretaría de Trabajo emitió la disposición que ratifica el aumento salarial y los dos bonos de $25.000 para los empleados de comercio.</p>
+            <div class="subnote-meta">
+              <time datetime="2026-09-12">Hace 3 horas</time>
+              <span>&bull;</span>
+              <span>3 min de lectura</span>
+              <button class="inline-whatsapp-btn share-btn-wa" data-title="Trabajo homologó el último acuerdo paritario de Comercio" data-id="nota-homologacion" aria-label="Compartir en WhatsApp">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+                <span style="margin-left:6px; font-weight:700; font-size:0.85rem;">Compartir</span>
+              </button>
+              <button class="qr-btn inline-qr-btn" title="Mostrar QR para escanear" data-id="nota-homologacion">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              </button>
+            </div>
+          </div>
+        </a>
+        <div class="hidden-desarrollo" hidden>
+          <p>La Secretaría de Trabajo, Empleo y Seguridad Social del Ministerio de Capital Humano ha homologado formalmente el acuerdo salarial alcanzado el pasado 22 de julio de 2026. A través de la Disposición DI-2026-964-APN-DNRYRT#MCH, el entendimiento entre FAECYS, CAC, CAME y UDECA ya tiene plena vigencia legal.</p>
+          <p>El acuerdo contempla un aumento del 5,7% trimestral más el pago de dos bonos de $25.000 (uno en agosto y otro en septiembre). Con esta firma gubernamental, las empresas están obligadas a liquidar las sumas adeudadas y respetar las nuevas escalas salariales pactadas para el CCT 130/75.</p>
+        </div>
+        <div class="hidden-criollo" hidden>
+          <ul>
+            <li>El Gobierno le dio luz verde oficial (homologó) al acuerdo paritario que firmó Cavalieri en julio.</li>
+            <li>Ya es ley: te tienen que pagar el aumento y los dos bonitos de $25.000.</li>
+            <li>Si tu jefe se hacía el distraído esperando "el papel", ya no tiene excusa.</li>
+          </ul>
+        </div></article>
 <!-- Nota 4 -->
 <article class="subnote-card spotlight-card" id="nota-autofarma">
 <a class="subnote-link leer-nota" href="#nota-autofarma">
@@ -416,7 +444,7 @@
 </div>
 </div>
 </div>
-<script defer="defer" src="main.js?v=3"></script>
+<script defer="defer" src="main.js?v=6"></script>
 </main>
 <!-- MODAL DE BÚSQUEDA -->
 <div aria-hidden="true" class="article-modal" hidden="" id="search-modal">

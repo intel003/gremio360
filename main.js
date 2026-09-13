@@ -145,17 +145,6 @@
   
 
 
-  /* ---------- 9. Conflict Day Counter ---------- */
-  function initConflictCounter() {
-    var el = document.getElementById('conflict-days');
-    if (!el) return;
-    // ← CONFIGURAR: fecha de inicio del conflicto (YYYY, MM-1, DD)
-    var conflictStart = new Date(2026, 6, 23); // 23 julio 2026
-    var today = new Date();
-    var diff = Math.floor((today - conflictStart) / (1000 * 60 * 60 * 24));
-    el.textContent = diff > 0 ? diff : 0;
-  }
-
   /* ---------- 10. WhatsApp Channel Banner close ---------- */
   function initWaBanner() {
     var bar   = document.querySelector('.wa-channel-bar');
@@ -333,8 +322,8 @@
     var pedidoEl = document.getElementById('paritaria-pedido');
     var estadoText = document.getElementById('paritaria-estado-text');
     var reunionEl = document.getElementById('paritaria-reunion');
-    var conflictWidget = document.getElementById('paritaria-conflict-widget');
-    var conflictDays = document.getElementById('paritaria-conflict-days');
+    var conflictWidget = document.getElementById('conflict-widget');
+    var conflictDays = document.getElementById('conflict-days');
 
     if (!select || !ofertaEl) return;
 
@@ -527,7 +516,7 @@ function initArticleModal() {
     initSmoothScroll();
     initScrollHeader();
     
-    initConflictCounter(); // old logic, will be overridden by paritarias
+    
     initWaBanner();
     initCalculator();
     initHeroModeSwitch();
