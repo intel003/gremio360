@@ -8,6 +8,7 @@
    Evita rojo/bordo/granate (Lista Granate / Negra y Roja),
    celeste/verde, azul (Oficialista) y naranja.            */
 :root {
+  color-scheme: dark;
   --accent:        #EAB308;  /* Amarillo advertencia principal */
   --accent-dark:   #CA8A04;  /* Amarillo oscuro (hover/sombra) */
   --accent-light:  #FEF9C3;  /* Fondo tenue amarillo */
@@ -891,7 +892,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
    DESKTOP RESPONSIVE (min-width: 768px)
    ============================================ */
 @media (min-width: 768px) {
-  :root { --header-h: 64px; }
+  :root {
+  color-scheme: dark; --header-h: 64px; }
 
   .header-top { padding: 5px 32px; }
   .header-main { padding: 10px 32px; }
