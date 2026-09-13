@@ -120,7 +120,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .logo-monogram {
   display: flex;
   align-items: baseline;
-  background: var(--accent);
+  background: linear-gradient(0deg, var(--accent), var(--accent));
   color: var(--black);
   padding: 3px 8px 4px;
   border-radius: 6px;
@@ -168,7 +168,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: block;
   width: 100%;
   height: 3px;
-  background: var(--accent);
+  background: linear-gradient(0deg, var(--accent), var(--accent));
   border-radius: 2px;
   margin: 2px 0;
 }
@@ -263,7 +263,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: var(--accent);
   background: var(--accent-light);
 }
-.nav-link--contact:hover { background: var(--accent); color: var(--white); }
+.nav-link--contact:hover { background: linear-gradient(0deg, var(--accent), var(--accent)); color: var(--white); }
 
 /* Nav overlay */
 .nav-overlay {
@@ -282,7 +282,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .breaking-bar {
   display: flex;
   align-items: center;
-  background: var(--accent);
+  background: linear-gradient(0deg, var(--accent), var(--accent));
   color: var(--white);
   overflow: hidden;
   min-height: 40px;
@@ -297,7 +297,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-weight: 700;
   letter-spacing: .1em;
   white-space: nowrap;
-  background: var(--accent-dark);
+  background: linear-gradient(0deg, var(--accent-dark), var(--accent-dark));
   flex-shrink: 0;
   height: 100%;
 }
@@ -390,7 +390,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   position: absolute;
   top: 14px;
   left: 14px;
-  background: var(--accent);
+  background: linear-gradient(0deg, var(--accent), var(--accent));
   color: var(--white);
   font-family: var(--font-sans);
   font-size: .68rem;
@@ -460,12 +460,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .btn:active { transform: scale(.97); }
 
 .btn--primary {
-  background: var(--accent);
+  background: linear-gradient(0deg, var(--accent), var(--accent));
   color: var(--white);
   box-shadow: 0 2px 8px rgba(155,28,28,.3);
 }
 .btn--primary:hover {
-  background: var(--accent-dark);
+  background: linear-gradient(0deg, var(--accent-dark), var(--accent-dark));
   box-shadow: 0 4px 16px rgba(155,28,28,.4);
 }
 
@@ -533,7 +533,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: inline-block;
   margin-bottom: 6px;
   
-  background: var(--accent);
+  background: linear-gradient(0deg, var(--accent), var(--accent));
   color: var(--white);
   font-size: .6rem;
   font-weight: 700;
@@ -710,7 +710,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   min-height: 100px;
 }
 .category-btn:hover {
-  background: var(--accent);
+  background: linear-gradient(0deg, var(--accent), var(--accent));
   border-color: var(--accent);
   color: var(--white);
   transform: translateY(-2px);
@@ -737,7 +737,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
    NEWSLETTER
    ============================================ */
 .newsletter-section {
-  background: var(--accent-dark);
+  background: linear-gradient(0deg, var(--accent-dark), var(--accent-dark));
   padding: 32px 0;
 }
 .newsletter-inner {
@@ -805,7 +805,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   align-items: baseline;
   gap: 0;
   margin-bottom: 6px;
-  background: var(--accent);
+  background: linear-gradient(0deg, var(--accent), var(--accent));
   color: var(--black);
   padding: 4px 10px 5px;
   border-radius: 6px;
@@ -1334,7 +1334,7 @@ body {
 .calc-select:focus { border-color: var(--accent); }
 .calc-btn {
   padding: 13px 24px;
-  background: var(--accent);
+  background: linear-gradient(0deg, var(--accent), var(--accent));
   color: #fff;
   font-family: var(--font-sans);
   font-weight: 700;
@@ -1345,7 +1345,7 @@ body {
   border: none;
   -webkit-tap-highlight-color: transparent;
 }
-.calc-btn:hover { background: var(--accent-dark); }
+.calc-btn:hover { background: linear-gradient(0deg, var(--accent-dark), var(--accent-dark)); }
 .calc-btn:active { transform: scale(.97); }
 
 .calc-results {
@@ -1496,7 +1496,7 @@ body {
 }
 
 .mode-pill-btn.active {
-  background: var(--accent);
+  background: linear-gradient(0deg, var(--accent), var(--accent));
   color: var(--black);
   box-shadow: var(--shadow-sm);
 }
@@ -1742,7 +1742,7 @@ body {
 .paritaria-badge {
   display: inline-flex;
   align-items: center;
-  background: var(--accent);
+  background: linear-gradient(0deg, var(--accent), var(--accent));
   color: var(--white);
   padding: 6px 12px;
   border-radius: var(--radius-sm);
@@ -1849,7 +1849,7 @@ body {
 }
 .modal-cat {
   display: inline-block;
-  background: var(--accent);
+  background: linear-gradient(0deg, var(--accent), var(--accent));
   color: var(--black);
   padding: 4px 8px;
   font-size: 0.75rem;
@@ -1934,7 +1934,7 @@ body {
   font-size: 0.75rem;
   font-weight: 800;
   color: var(--black);
-  background: var(--accent);
+  background: linear-gradient(0deg, var(--accent), var(--accent));
   padding: 3px 8px;
   border-radius: 4px;
   text-transform: uppercase;
